@@ -20,7 +20,7 @@ public class AddNewPart {
 		
 	WebDriverWait wait = new WebDriverWait(driver, 40);
 	WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"loginForm\"]/div/div/form/div/div/div[3]/span/div/div/div/div/div/div/div/div/button/div[2]")));
-		
+	
 driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div/form/div/div/div[3]/span/div/div/div/div/div/div/div/div/button/div[2]")).click();
 
 driver.findElement(By.xpath("//*[@id=\"i0116\"]")).sendKeys("RAMAKRISHNANV@ccl.org");
