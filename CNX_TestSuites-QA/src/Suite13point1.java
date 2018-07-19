@@ -55,9 +55,7 @@ public class Suite13point1 {
 				
 		//Open Clavin
 
-
-
-		driver.get("https://clavin-reporting-uat.ccl.org/Home/");
+		driver.get("https://clavin-reporting-qa.ccl.org/Home/");
 		driver.manage().window().maximize();
 		
 		WebDriverWait wait2111 = new WebDriverWait(driver, 40);

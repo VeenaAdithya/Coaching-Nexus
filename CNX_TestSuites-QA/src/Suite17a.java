@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Suite17 {
+public class Suite17a {
 
 	public static void main(String[] args) throws IOException {
 	
@@ -143,7 +143,7 @@ driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div
 
 
 try {
-	Thread.sleep(7000);
+	Thread.sleep(10000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -189,6 +189,7 @@ e.printStackTrace();
 }
 
 
+
 //Click on +Register button -> CSR
 
 WebDriverWait wait221 = new WebDriverWait(driver11, 40);
@@ -222,7 +223,7 @@ try {
 	e.printStackTrace();
 }
 JavascriptExecutor je11111 = (JavascriptExecutor)driver11;
-WebElement element1111111111 = driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/ul/li[24]/a/label"));
+WebElement element1111111111 = driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/ul/li[16]/a/label"));
 je11111.executeScript("arguments[0].scrollIntoView(true);", element1111111111);
 try {
 	Thread.sleep(5000);
@@ -230,7 +231,7 @@ try {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/ul/li[18]/a/label")).click();
+driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/ul/li[16]/a/label")).click();
 
 try {
 	Thread.sleep(3000);
@@ -245,6 +246,24 @@ try {
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
+}
+//Click on the 'i' button
+WebDriverWait wait5221 = new WebDriverWait(driver11, 40);
+WebElement element5221 = wait5221.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[1]/div/span/a/span")));
+
+driver11.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[1]/div/span/a/span")).click();
+try {
+Thread.sleep(8000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+driver11.findElement(By.xpath("/html/body/div[4]/div/div/div[1]/button")).click();
+try {
+Thread.sleep(6000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
 }
 
 
@@ -277,13 +296,35 @@ try {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
+
 driver11.findElement(By.xpath("//*[@id=\"ICRInlineDetailForm\"]/table/tbody/tr/td[1]/a")).click();
 try {
-	Thread.sleep(1000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
+
+//Click on the 'i' button
+WebDriverWait wait52211 = new WebDriverWait(driver11, 40);
+WebElement element52211 = wait52211.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[1]/div[1]/div/span/a/span")));
+
+driver11.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[1]/div[1]/div/span/a/span")).click();
+try {
+Thread.sleep(8000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+driver11.findElement(By.xpath("/html/body/div[4]/div/div/div[1]/button")).click();
+try {
+Thread.sleep(6000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+
+
 
 driver11.quit();
 
@@ -361,8 +402,8 @@ driver111.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/f
 
 //Click on +Register button -> CSR
 
-WebDriverWait wait5221 = new WebDriverWait(driver111, 40);
-WebElement element5221 = wait5221.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
+WebDriverWait wait52215 = new WebDriverWait(driver111, 40);
+WebElement element52215 = wait52215.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
 
 driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
 
@@ -410,7 +451,24 @@ try {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
+//Click on the 'i' button
+WebDriverWait wait522151 = new WebDriverWait(driver111, 40);
+WebElement element522151 = wait522151.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[1]/div/span/a/span")));
 
+driver111.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[1]/div/span/a/span")).click();
+try {
+Thread.sleep(8000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+driver111.findElement(By.xpath("/html/body/div[4]/div/div/div[1]/button")).click();
+try {
+Thread.sleep(6000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
 
 
 //Register -> ICR
@@ -448,6 +506,25 @@ try {
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
+}
+
+//Click on the 'i' button
+WebDriverWait wait522111 = new WebDriverWait(driver111, 40);
+WebElement element522111 = wait522111.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[1]/div[1]/div/span/a/span")));
+
+driver111.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[1]/div[1]/div/span/a/span")).click();
+try {
+Thread.sleep(8000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+driver111.findElement(By.xpath("/html/body/div[4]/div/div/div[1]/button")).click();
+try {
+Thread.sleep(6000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
 }
 
 driver111.quit();

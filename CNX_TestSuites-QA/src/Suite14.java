@@ -34,7 +34,7 @@ public class Suite14 {
 		String invitedate=null;
 		String expdate=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite14.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite14.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -212,28 +212,76 @@ try {
 	e.printStackTrace();
 }
 //Select Dates
-//driver.findElement(By.xpath("//*[@id=\"InvitationDateTime\"]")).clear();
-//driver.findElement(By.xpath("//*[@id=\"InvitationExpiresDateTime\"]")).clear();
+//Invite date
+driver.findElement(By.xpath("//*[@id=\"InvitationDateTime\"]")).clear();
 try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-try {
-	Thread.sleep(4000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-//driver.findElement(By.xpath("//*[@id=\"InvitationDateTime\"]")).sendKeys(invitedate);
+driver.findElement(By.xpath("//*[@id=\"InvitationDateTime\"]")).sendKeys(invitedate);
 
-//driver.findElement(By.xpath("//*[@id=\"InvitationExpiresDateTime\"]")).sendKeys(expdate);
+
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+//Expiry date
+driver.findElement(By.xpath("//*[@id=\"InvitationExpiresDateTime\"]")).clear();
+try {
+	Thread.sleep(3000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+driver.findElement(By.xpath("//*[@id=\"InvitationExpiresDateTime\"]")).sendKeys(expdate);
+
+
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
 
 
 //Save registration
 driver.findElement(By.xpath("//*[@id=\"ICRInlineDetailForm\"]/table/tbody/tr/td[13]/button")).click();
+
+try {
+	Thread.sleep(8000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	}

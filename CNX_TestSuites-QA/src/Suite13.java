@@ -92,7 +92,7 @@ public class Suite13 {
 		//Open Chrome and CNX QA
 				System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 				WebDriver driver =new ChromeDriver();
-				driver.get("https://cclcoachingnexus-uat.ccl.org");
+				driver.get("https://cclcoachingnexus-qa.ccl.org");
 				driver.manage().window().maximize();
 				
 			WebDriverWait wait = new WebDriverWait(driver, 40);

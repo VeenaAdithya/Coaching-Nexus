@@ -25,7 +25,7 @@ public class Suite27 {
 		
 		
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite27.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite27.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -159,7 +159,12 @@ public class Suite27 {
 		
 		
 		
-		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		
@@ -328,7 +333,12 @@ public class Suite27 {
 				
 				
 		
-		
+				try {
+					Thread.sleep(8000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				
 				
 				

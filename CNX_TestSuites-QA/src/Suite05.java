@@ -24,7 +24,7 @@ public class Suite05 {
 		String ccladmpwd=null;
 		String note=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite05.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite05.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -48,7 +48,7 @@ public class Suite05 {
 		//Open Chrome and CNX QA
 				System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 				WebDriver driver =new ChromeDriver();
-				driver.get("https://cclcoachingnexus-uat.ccl.org");
+				driver.get("https://cclcoachingnexus-qa.ccl.org");
 				driver.manage().window().maximize();
 				
 			WebDriverWait wait = new WebDriverWait(driver, 40);
@@ -178,7 +178,7 @@ try {
 		driver.findElement(By.xpath("//*[@id=\"coacheeRoster\"]/tbody/tr/td[2]/div/div[2]/a[3]/span")).click();
 
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(7000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -186,7 +186,7 @@ try {
 		
 		driver.findElement(By.xpath("//*[@id=\"newNoteTextArea\"]")).sendKeys("Test12345");
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(7000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -749,7 +749,7 @@ try {
 									}
 									driver.findElement(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")).click();
 									
-									//Filter to display stage COACHING ASSIGNMENT
+		//Filter to display stage COACHING ASSIGNMENT
 
 									try {
 										Thread.sleep(4000);
