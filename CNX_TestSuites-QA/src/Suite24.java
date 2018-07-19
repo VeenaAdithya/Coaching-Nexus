@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Suite24 {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+		
 
 		String ccladmemail=null;
 		String ccladmpwd=null;
@@ -319,7 +319,6 @@ try {
 
 
 
-
 //Filter for invitation sent
 
 WebDriverWait wait2111 = new WebDriverWait(driver, 40);
@@ -366,7 +365,7 @@ driver.findElement(By.xpath("//*[@id=\"FirstNameDetail\"]")).clear();
 
 driver.findElement(By.xpath("//*[@id=\"LastNameDetail\"]")).clear();
 
-driver.findElement(By.xpath("//*[@id=\"EmailDetail\"]")).clear();
+//driver.findElement(By.xpath("//*[@id=\"EmailDetail\"]")).clear();
 
 try {
 	Thread.sleep(4000);
@@ -391,13 +390,8 @@ try {
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"EmailDetail\"]")).sendKeys(alternateemail);
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
+//driver.findElement(By.xpath("//*[@id=\"EmailDetail\"]")).sendKeys(alternateemail);
+
 
 
 
@@ -419,15 +413,6 @@ WebElement element6211111 = wait6211111.until(ExpectedConditions.elementToBeClic
 
 driver.findElement(By.xpath("//*[@id=\"form0\"]/div[1]/div[2]/div/label[3]/span[1]")).click();
 
-//Add notes
-
-driver.findElement(By.xpath("//*[@id=\"NotesDetail\"]")).sendKeys(notes);
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
 
 //Change client admin
 driver.findElement(By.xpath("//*[@id=\"form0\"]/div[3]/div[4]/span[1]/div/button/span")).click();
@@ -502,37 +487,29 @@ try {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"form0\"]/div[2]/div[1]/div/span[1]/div/div")).submit();
 
+//Add notes
+
+driver.findElement(By.xpath("//*[@id=\"NotesDetail\"]")).sendKeys(notes);
+try {
+	Thread.sleep(4000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
 
 
 //click on save
 
-driver.findElement(By.xpath("//*[@id=\"form0\"]/div[5]/div/input")).click();
+driver.findElement(By.xpath("//*[@id=\"form0\"]/div[5]/div/input")).submit();
 
 
-//Re open the ICR
-
-//Click on edit button for an ICR Participant
 try {
-	Thread.sleep(10000);
+	Thread.sleep(15000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-WebDriverWait wait221111 = new WebDriverWait(driver, 40);
-WebElement element221111 = wait221111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"candidateTable\"]/tbody/tr[1]/td[2]/a/i")));
-driver.findElement(By.xpath("//*[@id=\"candidateTable\"]/tbody/tr[1]/td[2]/a/i")).click();
-
-try {
-	Thread.sleep(10000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-driver.findElement(By.xpath("/html/body/div[7]/div/div/div[1]/button")).click();
-
 
 
 

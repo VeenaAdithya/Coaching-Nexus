@@ -24,7 +24,7 @@ public class Suite14point1 {
 		String icrpartpwd=null;
 		
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite14.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite14.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -52,7 +52,7 @@ public class Suite14point1 {
 				System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 				WebDriver driver =new ChromeDriver();	
 		//Open Clavin
-		driver.get("https://clavin-reporting-uat.ccl.org/Home/");
+		driver.get("https://clavin-reporting-qa.ccl.org/Home/");
 		driver.manage().window().maximize();
 		
 		WebDriverWait wait2111 = new WebDriverWait(driver, 40);
@@ -135,6 +135,14 @@ public class Suite14point1 {
 		driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr/td/table[3]/tbody/tr/td/table/tbody/tr/td/a")).sendKeys(icrpartpwd);
 		driver.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/button/span")).click();
 
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 

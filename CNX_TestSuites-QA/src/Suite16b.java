@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Suite18 {
+public class Suite16b {
 
 	public static void main(String[] args) throws IOException {
 
@@ -27,12 +27,12 @@ public class Suite18 {
 		
 		
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite17.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite16.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
-		XSSFSheet sheet1=wb.getSheet("Suite17");
+		XSSFSheet sheet1=wb.getSheet("Suite16");
 
 		XSSFRow row=sheet1.getRow(3);
 		XSSFCell cell1=row.getCell(4);
@@ -214,141 +214,6 @@ driver1.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/for
 driver1.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/div[3]/span/div/div/div/div/div/div/div/div/div[3]/div[2]/div/div/input")).sendKeys(clientadmpwd);
 driver1.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/button")).click();
 
-
-//Click on +Register button -> CSR
-
-WebDriverWait wait21 = new WebDriverWait(driver1, 40);
-WebElement element21 = wait21.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
-
-driver1.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
-
-try {
-Thread.sleep(3000);
-} catch (InterruptedException e) {
-// TODO Auto-generated catch block
-e.printStackTrace();
-}
-
-driver1.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li[1]/a/span")).click();
-try {
-Thread.sleep(10000);
-} catch (InterruptedException e) {
-// TODO Auto-generated catch block
-e.printStackTrace();
-}		
-
-
-//Ensure Region North America is not displayed
-
-WebDriverWait wait211 = new WebDriverWait(driver1, 40);
-WebElement element211 = wait211.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")));
-
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
-
-//Select region Asia Pacific
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[2]/a/label")).click();
-
-//click on country dropdown-Ensure China is not displayed
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Select India
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[3]/a/label")).click();
-
-
-
-//Select Region - Europe
-
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[3]/a/label")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-//click on country dropdown-Ensure Austria and Belgium is not displayed
-
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Select United Kingdom
-JavascriptExecutor je111 = (JavascriptExecutor)driver1;
-WebElement element11111111 = driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[20]/a/label"));
-je111.executeScript("arguments[0].scrollIntoView(true);", element11111111);
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[20]/a/label")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-//Select Region - South America
-
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[5]/a/label")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-//click on country dropdown-Ensure Argentina, Brazil are not displayed
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Select Venezuela
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[3]/a/label")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Close CSR registration form
-driver1.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[3]/div/div/a")).click();
-
 try {
 	Thread.sleep(8000);
 } catch (InterruptedException e) {
@@ -356,24 +221,18 @@ try {
 	e.printStackTrace();
 }
 
-
-
-
-
-
-
 //Register -> ICR
 WebDriverWait wait5521 = new WebDriverWait(driver1, 40);
 WebElement element5521 = wait5521.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
 
 driver1.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
 try {
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver1.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li[2]/a/span")).click();
+driver1.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li/a/span")).click();
 
 //Click on country dropdown
 WebDriverWait wait55211 = new WebDriverWait(driver1, 40);
@@ -497,158 +356,6 @@ driver111.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/f
 driver111.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/button")).click();
 
 
-//Click on +Register button -> CSR
-
-WebDriverWait wait5221 = new WebDriverWait(driver111, 40);
-WebElement element5221 = wait5221.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
-
-driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
-
-try {
-Thread.sleep(3000);
-} catch (InterruptedException e) {
-//TODO Auto-generated catch block
-e.printStackTrace();
-}
-
-driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li[1]/a/span")).click();
-		
-
-
-//Ensure Region North America is displayed
-
-WebDriverWait wait2111 = new WebDriverWait(driver111, 40);
-WebElement element2111 = wait2111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")));
-
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
-
-//Select region Asia Pacific
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[2]/a/label")).click();
-
-//click on country dropdown-Ensure China is displayed
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Select India
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[3]/a/label")).click();
-
-
-
-//Select Region - Europe
-
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[3]/a/label")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-//click on country dropdown-Ensure Austria and Belgium are displayed
-
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Select United Kingdom
-JavascriptExecutor je1111 = (JavascriptExecutor)driver111;
-WebElement element111111111 = driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[22]/a/label"));
-je1111.executeScript("arguments[0].scrollIntoView(true);", element111111111);
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[22]/a/label")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-//Select Region - North America
-
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[4]/a/label")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-//click on country dropdown
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Select country
-driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[3]/a/label")).click();
-try {
-	Thread.sleep(6000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//Close CSR registration form
-driver111.findElement(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")).click();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 try {
 	Thread.sleep(8000);
@@ -676,7 +383,7 @@ try {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li[2]/a/span")).click();
+driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li/a/span")).click();
 try {
 	Thread.sleep(6000);
 } catch (InterruptedException e) {

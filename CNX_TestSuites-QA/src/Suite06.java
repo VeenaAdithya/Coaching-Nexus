@@ -22,12 +22,12 @@ public class Suite06 {
 		String ccladmpwd=null;
 		String note=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite05.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite06.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
-		XSSFSheet sheet1=wb.getSheet("Suite05");
+		XSSFSheet sheet1=wb.getSheet("Suite06");
 
 		XSSFRow row=sheet1.getRow(3);
 		XSSFCell cell1=row.getCell(4);
@@ -95,20 +95,9 @@ public class Suite06 {
 			e.printStackTrace();
 		}
 		
-		//Select deactivated CSR's
-
-				try {
-					Thread.sleep(7000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				WebDriverWait wait211111 = new WebDriverWait(driver, 40);
-				WebElement element211111 = wait211111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"GridControls\"]/div[3]/label")));
-				driver.findElement(By.xpath("//*[@id=\"GridControls\"]/div[3]/label")).click();	
 		
-		//Scroll down and check footer
+		
+		
 		JavascriptExecutor je11 = (JavascriptExecutor)driver;
 		WebElement element111111 = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[2]/div[4]/div[2]/ul/li[3]/a"));
 		je11.executeScript("arguments[0].scrollIntoView(true);", element111111);
@@ -134,11 +123,84 @@ public class Suite06 {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("scroll(400, 0)");
 		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+		//Select deactivated CSR's
+				
+				WebDriverWait wait211111 = new WebDriverWait(driver, 40);
+				WebElement element211111 = wait211111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"GridControls\"]/div[3]/label")));
+				driver.findElement(By.xpath("//*[@id=\"GridControls\"]/div[3]/label")).click();	
+		
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+		//Scroll down and check footer
+		JavascriptExecutor je111 = (JavascriptExecutor)driver;
+		WebElement element1111111 = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[2]/div[4]/div[2]/ul/li[3]/a"));
+		je111.executeScript("arguments[0].scrollIntoView(true);", element1111111);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		//Go to next page
+		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[2]/div[4]/div[2]/ul/li[3]/a")).click();
+		
+		try {
 			Thread.sleep(7000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//Scroll up
+		
+		JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+		jse1.executeScript("scroll(400, 0)");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath("//*[@id=\"candidateTable\"]/tbody/tr[1]/td[1]/div/div[1]/div/a[1]/i")).click();
+		try {
+			Thread.sleep(7000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		WebDriverWait wait21 = new WebDriverWait(driver, 40);
+		WebElement element21 = wait21.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"globalModalContent\"]/div/ul/li[4]/a")));
+		
+		//Go to Change Log page
+		driver.findElement(By.xpath("//*[@id=\"globalModalContent\"]/div/ul/li[4]/a")).click();
+		try {
+			Thread.sleep(6000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//close box
+		driver.findElement(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")).click();
+		
+		
+		
+		
+	
+		
+		
 		//Search button
 		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[3]/input")).sendKeys("cclveenatest");
 		try {
@@ -151,25 +213,119 @@ public class Suite06 {
 		
 		//Select Completed CSR's
 		
-		JavascriptExecutor jse1 = (JavascriptExecutor)driver;
-		jse1.executeScript("scroll(400, 0)");
+		JavascriptExecutor jse11 = (JavascriptExecutor)driver;
+		jse11.executeScript("scroll(400, 0)");
 		
 		WebDriverWait wait2111111 = new WebDriverWait(driver, 40);
 		WebElement element2111111 = wait2111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"GridControls\"]/div[3]/label")));
 		driver.findElement(By.xpath("//*[@id=\"GridControls\"]/div[2]/label")).click();	
 		
 		try {
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-	//Select Deactivated CSR's
 		
+		//Search button
+				driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[3]/input")).clear();
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[2]/button")).click();
+				
+				
+				try {
+					Thread.sleep(7000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		
-		
-	
+		//Go to next page
+				//Scroll down and check footer
+				JavascriptExecutor je1111 = (JavascriptExecutor)driver;
+				WebElement element11111111 = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[2]/div[4]/div[2]/ul/li[3]/a"));
+				je1111.executeScript("arguments[0].scrollIntoView(true);", element11111111);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				//Go to next page
+				driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[2]/div[4]/div[2]/ul/li[3]/a")).click();
+				
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+					
+				
+	//Scroll up and click on Edit for a participant
+				
+				JavascriptExecutor jse111 = (JavascriptExecutor)driver;
+				jse111.executeScript("scroll(400, 0)");
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				driver.findElement(By.xpath("//*[@id=\"candidateTable\"]/tbody/tr[1]/td[1]/div/div[1]/div/a[1]/i")).click();
+				
+				
+				WebDriverWait wait211 = new WebDriverWait(driver, 40);
+				WebElement element211 = wait211.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"globalModalContent\"]/div/ul/li[4]/a")));
+				
+				//Go to Change Log page
+				driver.findElement(By.xpath("//*[@id=\"globalModalContent\"]/div/ul/li[4]/a")).click();
+				try {
+					Thread.sleep(6000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				//scroll down
+			
+				JavascriptExecutor je11111 = (JavascriptExecutor)driver;
+				WebElement element111111111 = driver.findElement(By.xpath("//*[@id=\"HistoryLogTab\"]/div/div[1]/div[2]/div[4]/div[1]/span[1]"));
+				je11111.executeScript("arguments[0].scrollIntoView(true);", element111111111);
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//Scroll up 
+				JavascriptExecutor jse1111 = (JavascriptExecutor)driver;
+				jse1111.executeScript("scroll(400, 0)");
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				//close box
+				driver.findElement(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")).click();
+						
+				
+				
+				
+				
+				
+				
+				
 	
 	
 	}

@@ -32,7 +32,7 @@ public class Suite15 {
 		String managername=null;
 		String manageremail=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite15.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite15.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		

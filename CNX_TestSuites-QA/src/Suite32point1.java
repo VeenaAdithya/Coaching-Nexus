@@ -14,22 +14,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Suite11point1 {
+public class Suite32point1 {
 
 	public static void main(String[] args) throws IOException {
-		
+		// TODO Auto-generated method stub
 		String ccladmemail=null;
 		String ccladmpwd=null;
-		String clientadmemail=null;
-		String clientadmpwd=null;
+		String icrpartemail=null;
+		String icrpartpwd=null;
 		
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite11.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite32.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
-		XSSFSheet sheet1=wb.getSheet("Suite11");
+		XSSFSheet sheet1=wb.getSheet("Suite32");
 
 		XSSFRow row=sheet1.getRow(3);
 		XSSFCell cell1=row.getCell(4);
@@ -37,16 +37,16 @@ public class Suite11point1 {
 		XSSFRow row1=sheet1.getRow(4);
 		XSSFCell cell2=row1.getCell(4);		
 		
-		XSSFRow row4=sheet1.getRow(13);
+		XSSFRow row4=sheet1.getRow(30);
 		XSSFCell cell5=row4.getCell(4);
 		
-		XSSFRow row10=sheet1.getRow(32);
+		XSSFRow row10=sheet1.getRow(33);
 		XSSFCell cell11=row10.getCell(4);
 		
 		ccladmemail=cell1.toString();
 		ccladmpwd=cell2.toString();
-		clientadmemail=cell5.toString();
-		clientadmpwd=cell11.toString();
+		icrpartemail=cell5.toString();
+		icrpartpwd=cell11.toString();
 		
 		//Open Chrome and CNX QA
 				System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
@@ -89,10 +89,10 @@ public class Suite11point1 {
 		WebDriverWait wait211111 = new WebDriverWait(driver, 40);
 		WebElement element211111 = wait211111.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[1]/div[3]/input")));
 
-		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[1]/div[3]/input")).sendKeys(clientadmemail);
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[1]/div[3]/input")).sendKeys(icrpartemail);
 
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -107,6 +107,22 @@ public class Suite11point1 {
 		WebDriverWait wait2111111 = new WebDriverWait(driver, 40);
 		WebElement element2111111 = wait2111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"notification_content\"]/div/a")));
 		driver.findElement(By.xpath("//*[@id=\"notification_content\"]/div/a")).click();
+		
+
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 
 		//Click on Sign up
 		WebDriverWait wait2211111 = new WebDriverWait(driver, 40);
@@ -116,7 +132,7 @@ public class Suite11point1 {
 		//Enter password
 		WebDriverWait wait211111111 = new WebDriverWait(driver, 40);
 		WebElement element211111111 = wait211111111.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr/td/table[3]/tbody/tr/td/table/tbody/tr/td/a")));
-		driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr/td/table[3]/tbody/tr/td/table/tbody/tr/td/a")).sendKeys(clientadmpwd);
+		driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr/td/table[3]/tbody/tr/td/table/tbody/tr/td/a")).sendKeys(icrpartpwd);
 		driver.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/button/span")).click();
 
 		
@@ -125,6 +141,9 @@ public class Suite11point1 {
 		
 		
 		
+		
+		
+
 	}
 
 }
