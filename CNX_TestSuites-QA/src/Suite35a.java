@@ -148,7 +148,7 @@ public class Suite35a {
 		Select Cou_dd=new Select(country_dropdown);
 		Cou_dd.selectByIndex(17);		
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -157,7 +157,7 @@ public class Suite35a {
 		Select ST_dd=new Select(Skillteam_dropdown);
 		ST_dd.selectByIndex(14);		
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -166,7 +166,7 @@ public class Suite35a {
 		//Click on Program manager dropdown
 		driver.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).click();
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(4000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -217,7 +217,7 @@ public class Suite35a {
 		
 		driver.findElement(By.xpath("//*[@id=\"GroupEditForm\"]/div[1]/div[2]/span/div/button")).click();
 		try {
-			Thread.sleep(6000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -225,7 +225,7 @@ public class Suite35a {
 		
 		driver.findElement(By.xpath("//*[@id=\"GroupEditForm\"]/div[1]/div[2]/span/div/div")).click();
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -275,7 +275,7 @@ public class Suite35a {
 		
 		//Edit first name, last name and email address
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -287,7 +287,7 @@ public class Suite35a {
 		driver.findElement(By.xpath("//*[@id=\"Email\"]")).clear();
 		
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -300,7 +300,7 @@ public class Suite35a {
 		driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(changeemailadd);
 		
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -314,7 +314,7 @@ public class Suite35a {
 		Select Int_dd=new Select(CoachingType_dropdown);
 		Int_dd.selectByIndex(1);		
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -325,7 +325,7 @@ public class Suite35a {
 		WebElement element11111111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]"));
 		je1111.executeScript("arguments[0].scrollIntoView(true);", element11111111111);
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -371,7 +371,7 @@ public class Suite35a {
 				Select Cou_dd1=new Select(country_dropdown1);
 				Cou_dd1.selectByIndex(17);		
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -380,7 +380,7 @@ public class Suite35a {
 				Select ST_dd1=new Select(Skillteam_dropdown1);
 				ST_dd1.selectByIndex(14);		
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -389,7 +389,7 @@ public class Suite35a {
 				//Click on Program manager dropdown
 				driver.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).click();
 				try {
-					Thread.sleep(7000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -444,7 +444,7 @@ public class Suite35a {
 				
 				driver.findElement(By.xpath("//*[@id=\"GroupEditForm\"]/div[1]/div[2]/span/div/button")).click();
 				try {
-					Thread.sleep(7000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -452,7 +452,7 @@ public class Suite35a {
 				
 				driver.findElement(By.xpath("//*[@id=\"GroupEditForm\"]/div[1]/div[2]/span/div/div")).click();
 				try {
-					Thread.sleep(3000);
+					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -540,7 +540,7 @@ public class Suite35a {
 				
 				//OPen Admin profile page again
 				try {
-					Thread.sleep(8000);
+					Thread.sleep(10000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -576,7 +576,7 @@ public class Suite35a {
 				}
 				driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/div")).submit();
 				try {
-					Thread.sleep(7000);
+					Thread.sleep(10000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -613,7 +613,7 @@ public class Suite35a {
 						driver.findElement(By.xpath("//*[@id=\"ClientFieldValues_37_inline\"]"));
 						
 						try {
-							Thread.sleep(4000);
+							Thread.sleep(2000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -631,7 +631,7 @@ public class Suite35a {
 						
 						driver.findElement(By.xpath("//*[@id=\"ClientFieldValues_31_inline\"]"));
 						try {
-							Thread.sleep(4000);
+							Thread.sleep(2000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -662,7 +662,7 @@ public class Suite35a {
 						driver.findElement(By.xpath("//*[@id=\"ClientFieldValues_37_inline\"]"));
 						
 						try {
-							Thread.sleep(4000);
+							Thread.sleep(1000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -680,7 +680,7 @@ public class Suite35a {
 						
 						driver.findElement(By.xpath("//*[@id=\"ClientFieldValues_31_inline\"]"));
 						try {
-							Thread.sleep(4000);
+							Thread.sleep(1000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -689,7 +689,7 @@ public class Suite35a {
 						Select ST_dd111=new Select(Skillteam_dropdown111);
 						ST_dd111.selectByIndex(1);		
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(4000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -700,7 +700,7 @@ public class Suite35a {
 						//Click on Program manager dropdown
 						driver.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).click();
 						try {
-							Thread.sleep(5000);
+							Thread.sleep(3000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -768,7 +768,7 @@ public class Suite35a {
 				
 				//Edit first name, last name and email address
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -780,7 +780,7 @@ public class Suite35a {
 				driver.findElement(By.xpath("//*[@id=\"Email\"]")).clear();
 				
 				try {
-					Thread.sleep(3000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -793,7 +793,7 @@ public class Suite35a {
 				driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(execadmin);
 				
 				try {
-					Thread.sleep(3000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
