@@ -108,9 +108,14 @@ public class Suite07 {
 			e.printStackTrace();
 		}
 		//Scroll down and go to third page
-		JavascriptExecutor je1111 = (JavascriptExecutor)driver;
-		WebElement element11111111 = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[2]/div[4]/div[2]/ul/li[4]/a"));
-		je1111.executeScript("arguments[0].scrollIntoView(true);", element11111111);
+		JavascriptExecutor jse21111 = (JavascriptExecutor)driver;
+		jse21111.executeScript("scroll(0, 2500);");
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		try {
 			Thread.sleep(4000);

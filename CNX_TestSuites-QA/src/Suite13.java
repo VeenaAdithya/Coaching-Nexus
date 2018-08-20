@@ -33,7 +33,7 @@ public class Suite13 {
 		String manageremail=null;
 		String partpwd=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite13.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite13.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -165,7 +165,7 @@ try {
 
 WebElement client_dropdown=driver.findElement(By.xpath("//*[@id=\"ClientAdminId\"]"));
 Select client_dd=new Select(client_dropdown);
-client_dd.selectByIndex(1);
+client_dd.selectByIndex(2);
 
 try {
 	Thread.sleep(4000);

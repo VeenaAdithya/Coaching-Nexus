@@ -172,13 +172,108 @@ e.printStackTrace();
 //log out
 driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[1]/a")).click();
 
+try {
+Thread.sleep(5000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+
+
+//Log in again
+driver.findElement(By.xpath("//*[@id=\"root\"]/p/a")).click();
+
+try {
+Thread.sleep(5000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
 
 
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+WebDriverWait wait12 = new WebDriverWait(driver, 40);
+WebElement element12 = wait12.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/div[3]/span/div/div/div/div/div/div/div/div/div[3]/div[1]/div/input")));
+
+//Enter Finance Coordinator email address and password
+
+driver.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/div[3]/span/div/div/div/div/div/div/div/div/div[3]/div[1]/div/input")).sendKeys(financecoord);
+driver.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/div[3]/span/div/div/div/div/div/div/div/div/div[3]/div[2]/div/div/input")).sendKeys(password);
+driver.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form/div/div/button")).click();
 
 
+//Make changes to Account settings and ensure changes are saved
+WebDriverWait wait21 = new WebDriverWait(driver, 40);
+WebElement element21 = wait21.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
+try {
+Thread.sleep(3000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
+try {
+Thread.sleep(3000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li/a")).click();
+try {
+Thread.sleep(3000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+//Edit Leadership Level to L5
+WebDriverWait wait211 = new WebDriverWait(driver, 40);
+WebElement element211 = wait211.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/span[2]")));
+driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/span[2]")).click();
+try {
+Thread.sleep(3000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/ul/li[4]")).click();
 
+try {
+Thread.sleep(3000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+
+
+//Scroll down and save
+JavascriptExecutor je221111 = (JavascriptExecutor)driver;
+WebElement element221111111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]"));
+je221111.executeScript("arguments[0].scrollIntoView(true);", element221111111111);				
+driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
+try {
+Thread.sleep(9000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+
+	
+	
+	
+	
+	
+	
 	}
 
 }

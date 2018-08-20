@@ -16,29 +16,26 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Suite34 {
+public class Suite25apoint1 {
 
 	public static void main(String[] args) throws IOException {
 		
 		String ccladmemail=null;
 		String ccladmpwd=null;
-		String firstname=null;
-		String lastname=null;
+		
 		String partemailadd=null;
-		String phone=null;
-		String ponum=null;
-		String assistname=null;
-		String assistemail=null;
+		String phonenum=null;
+		String assistantname=null;
+		String assistantemail=null;
 		String managername=null;
 		String manageremail=null;
-		String partpwd=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite34.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite25.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
-		XSSFSheet sheet1=wb.getSheet("Suite34");
+		XSSFSheet sheet1=wb.getSheet("Suite25");
 
 		XSSFRow row=sheet1.getRow(3);
 		XSSFCell cell1=row.getCell(4);
@@ -46,48 +43,35 @@ public class Suite34 {
 		XSSFRow row1=sheet1.getRow(4);
 		XSSFCell cell2=row1.getCell(4);
 		
-		XSSFRow row2=sheet1.getRow(11);
+		XSSFRow row2=sheet1.getRow(13);
 		XSSFCell cell3=row2.getCell(4);
 		
-		XSSFRow row3=sheet1.getRow(12);
+		XSSFRow row3=sheet1.getRow(29);
 		XSSFCell cell4=row3.getCell(4);
 		
-		XSSFRow row4=sheet1.getRow(13);
+		XSSFRow row4=sheet1.getRow(30);
 		XSSFCell cell5=row4.getCell(4);
 		
-		XSSFRow row5=sheet1.getRow(14);
+		XSSFRow row5=sheet1.getRow(31);
 		XSSFCell cell6=row5.getCell(4);
 		
-		XSSFRow row6=sheet1.getRow(16);
+		XSSFRow row6=sheet1.getRow(32);
 		XSSFCell cell7=row6.getCell(4);
 		
-		XSSFRow row7=sheet1.getRow(22);
+		XSSFRow row7=sheet1.getRow(33);
 		XSSFCell cell8=row7.getCell(4);
-		
-		XSSFRow row8=sheet1.getRow(23);
-		XSSFCell cell9=row8.getCell(4);
-		
-		XSSFRow row9=sheet1.getRow(24);
-		XSSFCell cell10=row9.getCell(4);
-		
-		XSSFRow row10=sheet1.getRow(25);
-		XSSFCell cell11=row10.getCell(4);
-		
-		XSSFRow row11=sheet1.getRow(32);
-		XSSFCell cell12=row11.getCell(4);
 		
 		ccladmemail=cell1.toString();
 		ccladmpwd=cell2.toString();
-		firstname=cell3.toString();
-		lastname=cell4.toString();
-		partemailadd=cell5.toString();
-		phone=cell6.toString();
-		ponum=cell7.toString();
-		assistname=cell8.toString();
-		assistemail=cell9.toString();
-		managername=cell10.toString();
-		manageremail=cell11.toString();
-		partpwd=cell12.toString();
+	
+		partemailadd=cell3.toString();
+		
+		phonenum=cell4.toString();
+		assistantname=cell5.toString();
+		assistantemail=cell6.toString();
+		managername=cell7.toString();
+		manageremail=cell8.toString();
+		
 		
 		//Open Chrome and CNX QA
 				System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
@@ -129,154 +113,182 @@ public class Suite34 {
 		WebDriverWait wait11111 = new WebDriverWait(driver, 40);
 		wait11111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"changeClient\"]/div/div/div[1]")));
 		
-	//Click on +Register -> Participant
 		
-driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
+		//Click on Integrated Coaching request in left panel
+		
+		driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[4]/a/span")).click();
+
+		try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		//Filter for stage Account set up started
+
+		WebDriverWait wait21111 = new WebDriverWait(driver, 40);
+		WebElement element21111 = wait21111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"IcrFilterDropdown\"]")));
+		
+		WebElement ICRStage_dropdown11=driver.findElement(By.xpath("//*[@id=\"IcrFilterDropdown\"]"));
+		Select Stage_dd11=new Select(ICRStage_dropdown11);
+		Stage_dd11.selectByIndex(1);		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		//Search for the accepted invite
+		
+		WebDriverWait wait211111 = new WebDriverWait(driver, 40);
+		WebElement element211111 = wait211111.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[1]/div[3]/input")));
+
+		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[1]/div[3]/input")).sendKeys(partemailadd);
+
+		try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		//click on the participant edit form
+		driver.findElement(By.xpath("//*[@id=\"candidateTable\"]/tbody/tr[1]/td[2]/a/i")).click();
+		try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//Close
+		driver.findElement(By.xpath("//*[@id=\"form0\"]/div[5]/div/a")).click();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+
+
+
+
+
+
+//Go to Participant Roster page and make edits to complete participant profile
+
+driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[2]/a/span")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(7000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/ul/li[5]/a/span")).click();
+//Search for registered ICR
 
-WebDriverWait wait24 = new WebDriverWait(driver, 40);
-WebElement element24 = wait24.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"FirstName\"]")));
-
+driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[1]/div[1]/div[3]/input")).sendKeys(partemailadd);
 try {
-	Thread.sleep(4000);
+	Thread.sleep(9000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"FirstName\"]")).sendKeys(firstname);
-driver.findElement(By.xpath("//*[@id=\"LastName\"]")).sendKeys(lastname);
-driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(partemailadd);
-driver.findElement(By.xpath("//*[@id=\"Phone\"]")).sendKeys(phone);
-
-//Select CLient Admin
+WebDriverWait wait6111611 = new WebDriverWait(driver, 40);
+WebElement element6111611 = wait6111611.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"coacheeRoster\"]/tbody/tr/td[2]/div/div[1]/a/div[2]")));
+driver.findElement(By.xpath("//*[@id=\"coacheeRoster\"]/tbody/tr/td[2]/div/div[1]/a/div[2]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(8000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-WebElement client_dropdown=driver.findElement(By.xpath("//*[@id=\"ClientAdminId\"]"));
-Select client_dd=new Select(client_dropdown);
-client_dd.selectByIndex(1);
+
+//enter phone number
+
+driver.findElement(By.xpath("//*[@id=\"Phone\"]")).sendKeys(phonenum);
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"PONumber\"]")).sendKeys(ponum);
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver.findElement(By.xpath("//*[@id=\"divAssgnCP\"]/div[1]/label")).click();
 
-JavascriptExecutor je = (JavascriptExecutor)driver;
-WebElement element22 = driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[1]/div/a/span[1]"));
-je.executeScript("arguments[0].scrollIntoView(true);", element22);
 
-WebDriverWait wait23 = new WebDriverWait(driver, 40);
-WebElement element23 = wait23.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[1]/div/a/span[1]")));
-
-//Select Region(North America), skill team (Finance), Leadership level LL2
+//scroll down
+JavascriptExecutor je1111 = (JavascriptExecutor)driver;
+WebElement element111111111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]"));
+je1111.executeScript("arguments[0].scrollIntoView(true);", element111111111111);
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[1]/div/a/span[1]")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[1]/div/a/ul/li[3]")).click();
-
-driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[2]/div/a/span[1]")).click();
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[2]/div/a/ul/li[4]")).click();
-
+//Select Leadership level -LL3
 driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/span[1]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/ul/li[2]")).click();
 
-//Select country United States
-driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[5]/div/a/span[2]")).click();
+driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/ul/li[3]")).click();
+
+//enter administrative assistant name and email
+driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_0__ClientFieldValueText\"]")).sendKeys(assistantname);
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[5]/div/a/ul/li[3]")).click();
+driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_1__ClientFieldValueText\"]")).sendKeys(assistantemail);
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-//Enter administrative assistant name, email address, manager name, manager email address
-driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_0__ClientFieldValueText\"]")).sendKeys(assistname);
-driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_1__ClientFieldValueText\"]")).sendKeys(assistemail);
+
+//enter manager name and email
+
 driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_2__ClientFieldValueText\"]")).sendKeys(managername);
+try {
+	Thread.sleep(2000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
 driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_3__ClientFieldValueText\"]")).sendKeys(manageremail);
 
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
-
-
-try {
-	Thread.sleep(4000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-//close registration confirmation message box
-WebDriverWait wait22231 = new WebDriverWait(driver, 40);
-WebElement element22231 = wait22231.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"registerCoachee\"]/div/div/div[1]/button/i")));
-driver.findElement(By.xpath("//*[@id=\"registerCoachee\"]/div/div/div[1]/button/i")).click();
-
-
-
-
-
+//Save
+driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]")).click();
 
 
 

@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Suite25 {
+public class Suite25a {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -38,7 +38,7 @@ public class Suite25 {
 		String partpwd=null;
 		
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite25.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite25.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		

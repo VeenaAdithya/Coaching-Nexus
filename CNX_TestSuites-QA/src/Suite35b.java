@@ -521,7 +521,7 @@ wait1111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("/
 		
 		//Scroll down and save
 		JavascriptExecutor je1111 = (JavascriptExecutor)driver1;
-		WebElement element111111111111 = driver1.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]"));
+		WebElement element111111111111 = driver1.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]"));
 		je1111.executeScript("arguments[0].scrollIntoView(true);", element111111111111);
 		try {
 			Thread.sleep(1000);
@@ -529,7 +529,7 @@ wait1111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("/
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver1.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]")).click();
+		driver1.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
 		try {
 			Thread.sleep(15000);
 		} catch (InterruptedException e) {
@@ -949,22 +949,14 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 			e.printStackTrace();
 		}
 //Edit skill team to only select Autonomous vehicles
-		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button")).click();
+		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button")).click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[2]/a/label")).click();
+		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[1]/a/label")).click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -972,7 +964,15 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 			e.printStackTrace();
 		}
 		
-		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/div")).submit();
+		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[2]/a/label")).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/div")).submit();
 		try {
 			Thread.sleep(6000);
 		} catch (InterruptedException e) {
@@ -1001,22 +1001,14 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 					e.printStackTrace();
 				}
 		//Edit country to only select Australia
-				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button")).click();
+				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/button")).click();
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[3]/a/label")).click();
+				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[1]/a/label")).click();
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
@@ -1024,7 +1016,15 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 					e.printStackTrace();
 				}
 				
-				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/div")).submit();
+				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[3]/a/label")).click();
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/div")).submit();
 				try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
@@ -1077,14 +1077,14 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 					e.printStackTrace();
 				}
 		//Edit skill team to only select Autonomous vehicles
-				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button")).click();
+				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button")).click();
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[2]/a/label")).click();
+				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[2]/a/label")).click();
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
@@ -1092,7 +1092,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 					e.printStackTrace();
 				}
 				
-				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/div")).submit();
+				driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/div")).submit();
 				try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
@@ -1121,7 +1121,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 							e.printStackTrace();
 						}
 				//Edit country to only select Australia
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/button")).click();
 						try {
 							Thread.sleep(2000);
 						} catch (InterruptedException e) {
@@ -1130,7 +1130,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 						}
 						
 						
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[3]/a/label")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[3]/a/label")).click();
 						try {
 							Thread.sleep(2000);
 						} catch (InterruptedException e) {
@@ -1138,7 +1138,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 							e.printStackTrace();
 						}
 						
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/div")).submit();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/div")).submit();
 						try {
 							Thread.sleep(8000);
 						} catch (InterruptedException e) {
@@ -1207,9 +1207,23 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 								
 								
 								//set country and skill team
+								driver1111.findElement(By.xpath("//*[@id=\"ClientFieldValues_37_inline\"]")).click();
+								try {
+									Thread.sleep(2000);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 								WebElement country_dropdown11=driver1111.findElement(By.xpath("//*[@id=\"ClientFieldValues_37_inline\"]"));
 								Select Cou_dd11=new Select(country_dropdown11);
 								Cou_dd11.selectByIndex(17);		
+								try {
+									Thread.sleep(1000);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+								driver1111.findElement(By.xpath("//*[@id=\"ClientFieldValues_31_inline\"]")).click();
 								try {
 									Thread.sleep(1000);
 								} catch (InterruptedException e) {
@@ -1237,7 +1251,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 								
 								
 								
-								//set country and skill team - to match filters applied for the test admin
+								//set country and skill team -
 								WebElement country_dropdown211=driver1111.findElement(By.xpath("//*[@id=\"ClientFieldValues_37_inline\"]"));
 								Select Cou_dd211=new Select(country_dropdown211);
 								Cou_dd211.selectByIndex(3);		
@@ -1606,21 +1620,21 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 						//edit security filters to select all
 						//Edit Skill team data filter to select all
 						//Edit skill team to only select Autonomous vehicles
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button")).click();
 						try {
 							Thread.sleep(1000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[1]/a/label")).click();
 						try {
 							Thread.sleep(2000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/div")).submit();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/div")).submit();
 						try {
 							Thread.sleep(6000);
 						} catch (InterruptedException e) {
@@ -1641,14 +1655,14 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 								WebElement element81111111111187111 = wait811111111111187111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"LastName\"]")));
 								
 						//Edit country to only select Australia
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/button")).click();
 						try {
 							Thread.sleep(1000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[1]/a/label")).click();
 						try {
 							Thread.sleep(1000);
 						} catch (InterruptedException e) {
@@ -1657,7 +1671,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 						}
 						
 		
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/div")).submit();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/div")).submit();
 						try {
 							Thread.sleep(3000);
 						} catch (InterruptedException e) {
@@ -1709,7 +1723,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 							e.printStackTrace();
 						}
 				//Edit skill team to select all
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button")).click();
 						try {
 							Thread.sleep(3000);
 						} catch (InterruptedException e) {
@@ -1717,7 +1731,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 							e.printStackTrace();
 						}
 						
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[1]/a/label")).click();
 						try {
 							Thread.sleep(3000);
 						} catch (InterruptedException e) {
@@ -1725,7 +1739,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 							e.printStackTrace();
 						}
 						
-						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/div")).submit();
+						driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/div")).submit();
 						try {
 							Thread.sleep(3000);
 						} catch (InterruptedException e) {
@@ -1754,7 +1768,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 									e.printStackTrace();
 								}
 						//Edit country to select all
-								driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button")).click();
+								driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/button")).click();
 								try {
 									Thread.sleep(1000);
 								} catch (InterruptedException e) {
@@ -1763,7 +1777,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 								}
 								
 								
-								driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
+								driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[1]/a/label")).click();
 								try {
 									Thread.sleep(1000);
 								} catch (InterruptedException e) {
@@ -1771,7 +1785,7 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 									e.printStackTrace();
 								}
 								
-								driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/div")).submit();
+								driver111.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/div")).submit();
 								try {
 									Thread.sleep(8000);
 								} catch (InterruptedException e) {

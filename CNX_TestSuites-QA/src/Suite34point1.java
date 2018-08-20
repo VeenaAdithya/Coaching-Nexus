@@ -23,7 +23,7 @@ public class Suite34point1 {
 		String partpwd=null;
 		String partemailadd=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite34.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite34.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		

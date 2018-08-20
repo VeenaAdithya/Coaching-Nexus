@@ -123,7 +123,7 @@ public class Suite18c {
 WebDriverWait wait331 = new WebDriverWait(driver, 40);
 WebElement element331 = wait331.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button/span")));
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -131,7 +131,7 @@ try {
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button/span")).click();
 
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -140,14 +140,14 @@ try {
 
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[5]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -183,7 +183,7 @@ try {
 
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button/span")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -191,7 +191,7 @@ try {
 
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -200,14 +200,14 @@ JavascriptExecutor je1 = (JavascriptExecutor)driver;
 WebElement element211111 = driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[44]/a/label"));
 je1.executeScript("arguments[0].scrollIntoView(true);", element211111);
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[44]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -301,7 +301,7 @@ WebDriverWait wait2111 = new WebDriverWait(driver11, 40);
 WebElement element2111 = wait2111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")));
 driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(6000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -319,7 +319,7 @@ try {
 
 driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -335,14 +335,14 @@ try {
 
 driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button/span")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[2]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -476,7 +476,7 @@ try {
 WebDriverWait wait311111111 = new WebDriverWait(driver, 40);
 WebElement element31111111 = wait311111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"FirstName\"]")));
 try {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -485,7 +485,7 @@ WebElement coachingType_dropdown=driver.findElement(By.xpath("//*[@id=\"Coaching
 Select CT_dd=new Select(coachingType_dropdown);
 CT_dd.selectByIndex(2);	
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -493,15 +493,15 @@ try {
 
 //Scroll down and click on save
 JavascriptExecutor je11 = (JavascriptExecutor)driver;
-WebElement element21111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]"));
+WebElement element21111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]"));
 je11.executeScript("arguments[0].scrollIntoView(true);", element21111111);
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
 
 try {
 	Thread.sleep(7000);
@@ -575,14 +575,14 @@ WebDriverWait wait21111 = new WebDriverWait(driver111, 40);
 WebElement element21111 = wait21111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")));
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(6000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/ul/li[2]/a/label")).click();
 try {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -593,14 +593,14 @@ try {
 
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[2]/a/label")).click();
 try {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -616,7 +616,7 @@ try {
 }
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[2]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -665,7 +665,7 @@ try {
 driver111.findElement(By.xpath("//*[@id=\"GridControls\"]/span/a/span")).click();
 
 try {
-	Thread.sleep(6000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -694,7 +694,7 @@ try {
 driver111.findElement(By.xpath("//*[@id=\"GridControls\"]/span/a/span")).click();
 
 try {
-	Thread.sleep(6000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -747,7 +747,7 @@ WebElement element3311 = wait3311.until(ExpectedConditions.elementToBeClickable(
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button/span")).click();
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -756,7 +756,7 @@ try {
 
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -795,7 +795,7 @@ try {
 
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -803,7 +803,7 @@ try {
 
 driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -884,7 +884,7 @@ WebDriverWait wait211111 = new WebDriverWait(driver1111, 40);
 WebElement element2111111111 = wait211111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")));
 driver1111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")).click();
 try {
-Thread.sleep(6000);
+Thread.sleep(2000);
 } catch (InterruptedException e) {
 // TODO Auto-generated catch block
 e.printStackTrace();
@@ -892,7 +892,7 @@ e.printStackTrace();
 
 driver1111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/ul/li[6]/a/label")).click();
 try {
-Thread.sleep(2000);
+Thread.sleep(1000);
 } catch (InterruptedException e) {
 // TODO Auto-generated catch block
 e.printStackTrace();
@@ -903,7 +903,7 @@ e.printStackTrace();
 
 driver1111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
 try {
-Thread.sleep(3000);
+Thread.sleep(2000);
 } catch (InterruptedException e) {
 // TODO Auto-generated catch block
 e.printStackTrace();
@@ -949,7 +949,7 @@ e.printStackTrace();
 driver1111.findElement(By.xpath("//*[@id=\"GridControls\"]/span/a/span")).click();
 
 try {
-Thread.sleep(6000);
+Thread.sleep(4000);
 } catch (InterruptedException e) {
 // TODO Auto-generated catch block
 e.printStackTrace();
@@ -975,7 +975,7 @@ try {
 driver1111.findElement(By.xpath("//*[@id=\"GridControls\"]/span/a/span")).click();
 
 try {
-	Thread.sleep(6000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1057,7 +1057,7 @@ try {
 WebDriverWait wait311111111111 = new WebDriverWait(driver, 40);
 WebElement element31111111111 = wait311111111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"FirstName\"]")));
 try {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1066,7 +1066,7 @@ WebElement coachingType_dropdown1=driver.findElement(By.xpath("//*[@id=\"Coachin
 Select CT_dd1=new Select(coachingType_dropdown1);
 CT_dd1.selectByIndex(0);	
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1074,15 +1074,15 @@ try {
 
 //Scroll down and click on save
 JavascriptExecutor je111 = (JavascriptExecutor)driver;
-WebElement element21111111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]"));
+WebElement element21111111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]"));
 je111.executeScript("arguments[0].scrollIntoView(true);", element21111111111);
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
 
 try {
 	Thread.sleep(7000);
@@ -1159,7 +1159,7 @@ WebDriverWait wait2111111 = new WebDriverWait(driver11111, 40);
 WebElement element211111111111 = wait2111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")));
 driver11111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(6000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1172,7 +1172,7 @@ JavascriptExecutor je71 = (JavascriptExecutor)driver11111;
 WebElement element711111 = driver11111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/ul/li[24]/a/label"));
 je71.executeScript("arguments[0].scrollIntoView(true);", element711111);
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1191,14 +1191,14 @@ try {
 
 driver11111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 driver11111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/ul/li[3]/a/label")).click();
 try {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1207,7 +1207,7 @@ try {
 
 driver11111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button/span")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1218,7 +1218,7 @@ WebElement element7111111 = driver11111.findElement(By.xpath("//*[@id=\"Demograp
 je711.executeScript("arguments[0].scrollIntoView(true);", element7111111);
 
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1249,7 +1249,7 @@ try {
 driver11111.findElement(By.xpath("//*[@id=\"GridControls\"]/span/a/span")).click();
 
 try {
-	Thread.sleep(6000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
