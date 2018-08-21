@@ -34,7 +34,7 @@ public class Suite14 {
 		String invitedate=null;
 		String expdate=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite14.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite14.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -150,7 +150,7 @@ WebElement element24 = wait24.until(ExpectedConditions.elementToBeClickable(By.x
 driver.findElement(By.xpath("//*[@id=\"NewIcrButton\"]")).click();
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -162,7 +162,7 @@ driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(partemailadd);
 
 //Select Program package
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -179,7 +179,7 @@ driver.findElement(By.xpath("//*[@id=\"ClientFieldValues_37_inline\"]")).sendKey
 //count_dd.selectByIndex(30);		
 		
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -190,7 +190,7 @@ driver.findElement(By.xpath("//*[@id=\"ClientFieldValues_31_inline\"]")).sendKey
 //Select skill_dd=new Select(skillteam_dropdown);
 //skill_dd.selectByIndex(14);	
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -198,7 +198,7 @@ try {
 //enter PO number
 driver.findElement(By.xpath("//*[@id=\"PONumber\"]")).sendKeys(ponum);
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -206,7 +206,7 @@ try {
 //select client admin
 driver.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).sendKeys(clientadm);
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -215,7 +215,7 @@ try {
 //Invite date
 driver.findElement(By.xpath("//*[@id=\"InvitationDateTime\"]")).clear();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -234,7 +234,7 @@ try {
 //Expiry date
 driver.findElement(By.xpath("//*[@id=\"InvitationExpiresDateTime\"]")).clear();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();

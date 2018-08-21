@@ -28,7 +28,7 @@ public class Suite18c {
 		
 		
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite18.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite18.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -121,39 +121,39 @@ public class Suite18c {
 		
 //Click on Skill team data filter
 WebDriverWait wait331 = new WebDriverWait(driver, 40);
-WebElement element331 = wait331.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button/span")));
+WebElement element331 = wait331.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button/span")));
 try {
-	Thread.sleep(4000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button/span")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button/span")).click();
 
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 //Unselect all and select only Finance
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[5]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[5]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/div")).submit();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/div")).submit();
 try {
 	Thread.sleep(15000);
 } catch (InterruptedException e) {
@@ -181,39 +181,39 @@ try {
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button/span")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/button/span")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 JavascriptExecutor je1 = (JavascriptExecutor)driver;
-WebElement element211111 = driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[44]/a/label"));
+WebElement element211111 = driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[44]/a/label"));
 je1.executeScript("arguments[0].scrollIntoView(true);", element211111);
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[44]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[44]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/div")).submit();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/div")).submit();
 try {
 	Thread.sleep(7000);
 } catch (InterruptedException e) {
@@ -301,7 +301,7 @@ WebDriverWait wait2111 = new WebDriverWait(driver11, 40);
 WebElement element2111 = wait2111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")));
 driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(6000);
+	Thread.sleep(3000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -319,7 +319,7 @@ try {
 
 driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -335,7 +335,7 @@ try {
 
 driver11.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button/span")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -433,7 +433,7 @@ try {
 
 //Scroll down and click on save
 JavascriptExecutor je11 = (JavascriptExecutor)driver;
-WebElement element21111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]"));
+WebElement element21111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]"));
 je11.executeScript("arguments[0].scrollIntoView(true);", element21111111);
 try {
 	Thread.sleep(3000);
@@ -441,7 +441,7 @@ try {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
 
 try {
 	Thread.sleep(7000);
@@ -515,7 +515,7 @@ WebDriverWait wait21111 = new WebDriverWait(driver111, 40);
 WebElement element21111 = wait21111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")));
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[6]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(6000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -533,7 +533,7 @@ try {
 
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[1]/div/span[1]/div/button")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -549,14 +549,14 @@ try {
 
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/button/span")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 driver111.findElement(By.xpath("//*[@id=\"DemographicsForm\"]/div[1]/div[5]/div[2]/div/span[1]/div/ul/li[2]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -626,26 +626,26 @@ try {
 
 //Click on Skill team data filter
 WebDriverWait wait3311 = new WebDriverWait(driver, 40);
-WebElement element3311 = wait3311.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button/span")));
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/button/span")).click();
+WebElement element3311 = wait3311.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button/span")));
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/button/span")).click();
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 //Select all filter set for skill team
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[2]/span/div/div")).submit();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[2]/span/div/div")).submit();
 try {
 	Thread.sleep(6000);
 } catch (InterruptedException e) {
@@ -667,32 +667,25 @@ try {
 //OPen the admin profile again
 
 WebDriverWait wait211111111 = new WebDriverWait(driver, 40);
-WebElement element211111111 = wait211111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button")));
+WebElement element211111111 = wait211111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/button")));
 
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/button")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/button")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/ul/li[1]/a/label")).click();
 try {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
-try {
-	Thread.sleep(3000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[2]/div[3]/span/div/div")).submit();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[4]/div[3]/span/div/div")).submit();
 try {
 	Thread.sleep(7000);
 } catch (InterruptedException e) {
@@ -901,15 +894,15 @@ try {
 
 //Scroll down and click on save
 JavascriptExecutor je111 = (JavascriptExecutor)driver;
-WebElement element21111111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]"));
+WebElement element21111111111 = driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]"));
 je111.executeScript("arguments[0].scrollIntoView(true);", element21111111111);
 try {
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"btnSaveCoacheeProfile\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
 
 try {
 	Thread.sleep(7000);

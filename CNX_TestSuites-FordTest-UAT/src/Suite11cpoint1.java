@@ -23,7 +23,7 @@ public class Suite11cpoint1 {
 		String clientadmemail=null;
 		String clientadmpwd=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite11c.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite11c.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		

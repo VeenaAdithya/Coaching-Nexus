@@ -32,7 +32,7 @@ public class Suite11b {
 		String manageremail=null;
 		String clientadmpwd=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite11b.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite11b.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -140,7 +140,7 @@ WebDriverWait wait24 = new WebDriverWait(driver, 40);
 WebElement element24 = wait24.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"FirstName\"]")));
 
 try {
-	Thread.sleep(4000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -153,25 +153,25 @@ driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(clientadmemail);
 
 //Set data filters for the Client Admin (Select all)
 //Skill team
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[2]/span/div/button")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div[2]/span/div/button")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[2]/span/div/div")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div[2]/span/div/ul/li[1]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div[2]/span/div/div")).click();
 
 //Select campus - Greensboro
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div/div/a/span[2]")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[5]/div/div/a/span[2]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div/div/a/ul/li[3]")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[5]/div/div/a/ul/li[3]")).click();
 
 //Enter phone number
 driver.findElement(By.xpath("//*[@id=\"Phone\"]")).sendKeys(phone);
@@ -179,7 +179,7 @@ driver.findElement(By.xpath("//*[@id=\"Phone\"]")).sendKeys(phone);
 //Select Region - Europe; Skill team
 driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[1]/div/a/span[2]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -187,7 +187,7 @@ try {
 driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[1]/div/a/ul/li[2]")).click();
 driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[2]/div/a/span[2]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -198,7 +198,7 @@ driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[2]/div/a/ul
 //Select leadership level
 driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/span[2]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -208,7 +208,7 @@ driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[3]/div/a/ul
 //Select Country
 driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[5]/div/a/span[2]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -236,29 +236,44 @@ try {
 	e.printStackTrace();
 }
 
+
+//Data filters: Country
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div[3]/span/div/button")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div[3]/span/div/ul/li[1]/a/label")).click();
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
 //Assistant email add and name
 driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_0__ClientFieldValueText\"]")).sendKeys(assistname);
 driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_1__ClientFieldValueText\"]")).sendKeys(assistemail);
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
 
 
 //Manager name and email
 
 driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_2__ClientFieldValueText\"]")).sendKeys(managername);
 driver.findElement(By.xpath("//*[@id=\"CNXUserClientFieldTextData_3__ClientFieldValueText\"]")).sendKeys(manageremail);
-
-
-
-
-
-//Data filters: Country
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[3]/span/div/button")).click();
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[3]/span/div/div")).submit();
-
-
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
 
 //Save registration
-//driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div[3]/span/div/div")).submit();
+
+
+
 
 try {
 	Thread.sleep(4000);
@@ -354,7 +369,7 @@ try {
 	e.printStackTrace();
 }
 //Click on cancel
-driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[9]/div/div[2]/button[1]")).click();
+driver.findElement(By.xpath("//*[@id=\"divAdminProfile\"]/div[10]/div/div[2]/button[1]")).click();
 
 try {
 	Thread.sleep(6000);

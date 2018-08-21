@@ -32,7 +32,7 @@ public class Suite11a {
 		String manageremail=null;
 		String clientadmpwd=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite11a.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite11a.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -154,7 +154,7 @@ driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(clientadmemail);
 //Skill team
 driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[2]/span/div/button")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -163,7 +163,7 @@ driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[2]/span/di
 driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[2]/div[2]/span/div/div")).click();
 
 //Select campus - Greensboro
-driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[4]/div/div/a/span[2]")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterAdmin\"]/div[5]/div/div/a/span[2]")).click();
 try {
 	Thread.sleep(4000);
 } catch (InterruptedException e) {

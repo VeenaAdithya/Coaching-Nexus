@@ -21,7 +21,7 @@ public class Suite01 {
 		String ccladmemail=null;
 		String ccladmpwd=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite01.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite01.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
