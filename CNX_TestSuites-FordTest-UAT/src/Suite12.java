@@ -53,7 +53,7 @@ public class Suite12 {
 		
 		
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\Suite12.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite12.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -1119,12 +1119,66 @@ try {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		driver.findElement(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")).click();
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+
 		
 		
 		
-			
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//Test 'Resend Invite' button for this CSR participant
+				//Click on the participant
+				WebDriverWait wait6111611111 = new WebDriverWait(driver, 40);
+				WebElement element6111611111 = wait6111611111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"coacheeRoster\"]/tbody/tr/td[2]/div/div[1]/a/div[2]")));
+				driver.findElement(By.xpath("//*[@id=\"coacheeRoster\"]/tbody/tr/td[2]/div/div[1]/a/div[2]")).click();
+				
+				try {
+					Thread.sleep(4000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//wait for profile page to open
+				WebDriverWait wait61116111111 = new WebDriverWait(driver, 40);
+				WebElement element61116111111 = wait61116111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"FirstName\"]")));
+				
+				//Scroll down and click on Remove
+				JavascriptExecutor je7111111 = (JavascriptExecutor)driver;
+				WebElement element71 = driver.findElement(By.xpath("//*[@id=\"lnkResentInvite\"]"));
+				je7111111.executeScript("arguments[0].scrollIntoView(true);", element71);
+
+				driver.findElement(By.xpath("//*[@id=\"lnkResentInvite\"]")).click();
+				try {
+					Thread.sleep(4000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//Click on Close
+				driver.findElement(By.xpath("//*[@id=\"bootstrap-alert-box-modal\"]/div/div/div[3]/a")).click();
+				try {
+					Thread.sleep(4000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
 	}
 
 }

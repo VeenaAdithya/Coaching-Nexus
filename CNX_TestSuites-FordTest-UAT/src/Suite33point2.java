@@ -29,7 +29,7 @@ public class Suite33point2 {
 		String changeemailaddadm=null;
 		String changeemailaddadm2=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite33.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite33.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
@@ -258,7 +258,7 @@ public class Suite33point2 {
 		driver1.findElement(By.xpath("//*[@id=\"ClientAdminId\"]")).click();
 		
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -299,7 +299,7 @@ public class Suite33point2 {
 				//Click on Program manager dropdown
 				driver1.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).click();
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -329,7 +329,7 @@ public class Suite33point2 {
 				//Click on Program manager dropdown
 				driver1.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).click();
 				try {
-					Thread.sleep(4000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -442,6 +442,13 @@ public class Suite33point2 {
 
 				//edit email address
 				driver11.findElement(By.xpath("//*[@id=\"Email\"]")).clear();
+				try {
+				Thread.sleep(2000);
+				} catch (InterruptedException e) {
+				//TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+
 
 				driver11.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(changeemailaddadm);
 				try {
@@ -596,7 +603,7 @@ public class Suite33point2 {
 				driver1.findElement(By.xpath("//*[@id=\"ClientAdminId\"]")).click();
 				
 				try {
-					Thread.sleep(3000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -637,7 +644,7 @@ public class Suite33point2 {
 						//Click on Program manager dropdown
 						driver1.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).click();
 						try {
-							Thread.sleep(4000);
+							Thread.sleep(5000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -667,7 +674,7 @@ public class Suite33point2 {
 						//Click on Program manager dropdown
 						driver1.findElement(By.xpath("//*[@id=\"ICRAdminCNXUserId_inline\"]")).click();
 						try {
-							Thread.sleep(4000);
+							Thread.sleep(5000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -780,6 +787,12 @@ public class Suite33point2 {
 
 						//edit email address
 						driver111.findElement(By.xpath("//*[@id=\"Email\"]")).clear();
+						try {
+						Thread.sleep(2000);
+						} catch (InterruptedException e) {
+						//TODO Auto-generated catch block
+						e.printStackTrace();
+						}
 
 						driver111.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(changeemailaddadm2);
 						try {

@@ -37,7 +37,7 @@ public class Suite33point1 {
 		String execadmpwd=null;
 		String changeemailaddadm=null;
 		
-		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite33.xlsx");
+		File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\UAT\\FordTest\\Suite33.xlsx");
 		
 		FileInputStream fis=new FileInputStream(src);
 		
