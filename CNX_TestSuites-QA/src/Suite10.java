@@ -147,25 +147,25 @@ driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(fincoordemail);
 //Set data filters for the Finance coordinator (Select all)
 //Skill team
 
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[2]/div[2]/span/div/button")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[3]/div[2]/span/div/button")).click();
 try {
 	Thread.sleep(4000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[2]/div[2]/span/div/ul/li[1]/a/label")).click();
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[2]/div[2]/span/div/div")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[3]/div[2]/span/div/ul/li[1]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[3]/div[2]/span/div/div")).click();
 
-//Select campus - JOHANNESBURG
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[4]/div/div/a/span[1]")).click();
+//Select campus - greensboro
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[4]/div/div/a")).click();
 try {
 	Thread.sleep(4000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[4]/div/div/a/ul/li[7]")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[4]/div/div/a/ul/li[3]")).click();
 
 //Enter phone number
 driver.findElement(By.xpath("//*[@id=\"Phone\"]")).sendKeys(phone);
@@ -212,7 +212,7 @@ try {
 driver.findElement(By.xpath("//*[@id=\"regAdmclientDataFields\"]/div[5]/div/a/ul/li[3]")).click();
 
 //Data filters: Country
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[2]/div[3]/span/div/button")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[3]/div[3]/span/div/button")).click();
 try {
 	Thread.sleep(2000);
 } catch (InterruptedException e) {
@@ -220,7 +220,7 @@ try {
 	e.printStackTrace();
 }
 
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[2]/div[3]/span/div/ul/li[1]/a/label")).click();
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[3]/div[3]/span/div/ul/li[1]/a/label")).click();
 try {
 	Thread.sleep(2000);
 } catch (InterruptedException e) {
@@ -261,7 +261,7 @@ try {
 }
 
 
-driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[2]/div[3]/span/div/div")).submit();
+driver.findElement(By.xpath("//*[@id=\"divRegisterFinanceCoord\"]/div[3]/div[3]/span/div/div")).submit();
 
 
 try {

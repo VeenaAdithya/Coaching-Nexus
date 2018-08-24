@@ -1392,6 +1392,26 @@ wait381111111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(
 								}
 								
 								driver1111.findElement(By.xpath("//*[@id=\"form0\"]/div[3]/div[4]/span[1]/div/div")).click();
+
+								//Chack Country and Skill team do not have Autonomous and Australia
+								driver1111.findElement(By.xpath("//*[@id=\"form0\"]/div[2]/div[1]/div/span[1]/div/button")).click();
+								try {
+									Thread.sleep(4000);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+								driver1111.findElement(By.xpath("//*[@id=\"form0\"]/div[2]/div[1]/div/span[1]/div/button")).click();
+								
+								
+								driver1111.findElement(By.xpath("//*[@id=\"form0\"]/div[2]/div[2]/div/span[1]/div/button")).click();
+								try {
+									Thread.sleep(4000);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+								driver1111.findElement(By.xpath("//*[@id=\"form0\"]/div[2]/div[2]/div/span[1]/div/button")).click();
 								
 								//close edit form
 								driver1111.findElement(By.xpath("//*[@id=\"form0\"]/div[5]/div/a")).click();
