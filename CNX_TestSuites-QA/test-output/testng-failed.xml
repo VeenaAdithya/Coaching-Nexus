@@ -3,17 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestSuites.Suite02a">
+      <class name="TestSuites.Sample02b">
         <methods>
-          <include name="Login3"/>
-          <include name="Login2"/>
-          <include name="Login1"/>
           <include name="Start"/>
-          <include name="Login6"/>
-          <include name="Login5"/>
+          <include name="Login3"/>
+          <include name="Login1"/>
           <include name="Login4"/>
+          <include name="Login7"/>
+          <include name="Login2"/>
+          <include name="Login5"/>
+          <include name="Login8"/>
+          <include name="Login6"/>
         </methods>
-      </class> <!-- TestSuites.Suite02a -->
+      </class> <!-- TestSuites.Sample02b -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
