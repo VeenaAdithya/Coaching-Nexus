@@ -25,7 +25,7 @@ import org.testng.annotations.Test;
 
 import junit.framework.Assert;
 
-public class Suite02a {
+public class Sample02b {
 
 	
 	
@@ -253,7 +253,7 @@ driver.quit();
 
 
 
- @Test(dependsOnMethods="Login1",description="Log in as CCL Admin and edit Coaching type access to Integrated for the Client Admin")
+ @Test(dependsOnMethods="Login1",description="Log in as CCL Admin and edit Coaching type access to Executive for the Client Admin")
 
  public void Login2() throws IOException
  
@@ -385,15 +385,6 @@ Thread.sleep(2000);
 e.printStackTrace();
 }
 
-TakesScreenshot ts51111=(TakesScreenshot)driver1;
-
-File source51111=ts51111.getScreenshotAs(OutputType.FILE);
-
-FileUtils.copyFile(source51111, new File("./Screenshots/Suite02a/05aAdminProfilePage.png"));
-	
-System.out.println("Changes to Coaching Type access screenshot is taken");
-
-
 //Set coaching type access to Integrated
 WebElement coachingType_dropdown=driver1.findElement(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]"));
 Select CT_dd=new Select(coachingType_dropdown);
@@ -410,7 +401,7 @@ TakesScreenshot ts1111=(TakesScreenshot)driver1;
 
 File source1111=ts1111.getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source1111, new File("./Screenshots/Suite02a/05bAdminProfilePage.png"));
+FileUtils.copyFile(source1111, new File("./Screenshots/Suite02a/05AdminProfilePage.png"));
 	
 System.out.println("Changes to Coaching Type access screenshot is taken");
 
@@ -443,7 +434,7 @@ try {
 
 
 
-@Test(dependsOnMethods="Login2",description="Verify Integrated Admin Home page")
+@Test(dependsOnMethods="Login2",description="Verify Executive Admin Home page")
 
 public void Login3() throws IOException
 
@@ -649,7 +640,7 @@ driver11.quit();
 //-----------------------------------------------------------------------------------------------------------------------------------
 
 
-@Test(dependsOnMethods="Login3",description="In CCL Admin page, verify change in email address; then change Coaching type access to Executive")
+@Test(dependsOnMethods="Login3",description="In CCL Admin page, verify change in email address; then change Coaching type access to Integrated")
 
 public void Login4() throws IOException
 
@@ -791,7 +782,7 @@ try {
 
 
 
-@Test(dependsOnMethods="Login4",description="Login as Client Admin and verify Executive Admin home page -> Then edit email address")
+@Test(dependsOnMethods="Login4",description="Login as Client Admin and verify Integrated Admin home page -> Then edit email address")
 
 public void Login5() throws IOException
 
@@ -1133,7 +1124,7 @@ try {
 driver1.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
 
 try {
-	Thread.sleep(5000);
+	Thread.sleep(11000);
 	} catch (InterruptedException e) {
 	//TODO Auto-generated catch block
 	e.printStackTrace();
@@ -1141,10 +1132,6 @@ try {
 
 
 //Logout
-
-
-WebDriverWait wait21111111 = new WebDriverWait(driver1, 40);
-wait21111111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"adminProfile\"]/div/div/div[2]")));
 
 driver1.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[1]/a/span[2]")).click();
 
