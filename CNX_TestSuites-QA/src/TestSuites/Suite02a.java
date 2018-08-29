@@ -27,17 +27,10 @@ import junit.framework.Assert;
 
 public class Suite02a {
 
-	
-	
-	
-	
-	
 	WebDriver driver;
 	WebDriver driver1;
 	WebDriver driver11;
 	WebDriver driver111;
-	
-	
 
 	@BeforeClass(description="Open Browser")
 	public void Start()
