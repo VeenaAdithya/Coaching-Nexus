@@ -20,6 +20,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -35,10 +36,14 @@ public class Suite02a {
 	@BeforeClass(description="Open Browser")
 	public void Start()
 	{
+
+
+		Reporter.log("----------------------||-This test is to verify change in Coaching type access made by CCL Admin");
+		
 				System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 				driver=new ChromeDriver();
 				
-				System.out.println("Browser has started");
+				Reporter.log("----------------------||-Browser has started");
 	
 	}
 	
@@ -48,6 +53,8 @@ public class Suite02a {
 	
 	public void Login1() throws IOException
 	{
+		
+		Reporter.log("----------------------||-First we will login as a Client Admin set up with Coaching type access as 'Both' and edit email address of the Admin in Account settings page");
 		
 		String clientadm=null;
 		String password=null;		
@@ -90,11 +97,40 @@ driver.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/form
 WebDriverWait wait1 = new WebDriverWait(driver, 40);
 WebElement element1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
 
+try {
+Thread.sleep(2000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
 
 //Assert Log in complete
 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).isEnabled());
 
-System.out.println("HomePage is open");
+Reporter.log("----------------------||-HomePage is open");
+
+//Screenshot of home page1
+
+Reporter.log("----------------------||-Screen shot of HomePage");
+
+File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+File screenshotName = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\01.png\\"+driver.getTitle()+".png");
+
+FileUtils.copyFile(scrFile, screenshotName);
+
+
+Reporter.log("<br><img src='"+screenshotName+"' height='475' width='900'/><br>");
+
+try {
+Thread.sleep(2000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+
+
+
 
 //Scroll down
 JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -108,13 +144,25 @@ e.printStackTrace();
 
 
 //Take snapshot of home page : check learning packages available
-TakesScreenshot ts=(TakesScreenshot)driver;
 
-File source=ts.getScreenshotAs(OutputType.FILE);
+Reporter.log("----------------------||-Screen shot of Coaching packages available in Home page");
 
-FileUtils.copyFile(source, new File("./Screenshots/Suite02a/01HomePage.png"));
-	
-System.out.println("Home page screenshot is taken");
+File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+File screenshotName1 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\02.png\\"+driver.getTitle()+".png");
+
+FileUtils.copyFile(scrFile1, screenshotName1);
+
+
+Reporter.log("<br><img src='"+screenshotName1+"' height='475' width='900'/><br>");
+
+try {
+Thread.sleep(2000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+
 
 
 
@@ -127,13 +175,18 @@ Thread.sleep(1000);
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
-TakesScreenshot ts1=(TakesScreenshot)driver;
 
-File source1=ts1.getScreenshotAs(OutputType.FILE);
+Reporter.log("----------------------||-Screen shot of Register button available in Home page");
 
-FileUtils.copyFile(source1, new File("./Screenshots/Suite02a/02RegisterButton.png"));
-	
-System.out.println("Register Button screenshot is taken");
+File scrFile11 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+File screenshotName11 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\03.png\\"+driver.getTitle()+".png");
+
+FileUtils.copyFile(scrFile11, screenshotName11);
+
+
+Reporter.log("<br><img src='"+screenshotName11+"' height='475' width='900'/><br>");
+
 
 
 try {
@@ -151,7 +204,7 @@ driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
 driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[3]/a")).click();
 
 try {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 	} catch (InterruptedException e) {
 	//TODO Auto-generated catch block
 	e.printStackTrace();
@@ -166,9 +219,19 @@ driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[3]/ul/li/a/span[2]"))
 WebDriverWait wait11 = new WebDriverWait(driver, 40);
 WebElement element11 = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"Email\"]")));
 
+Reporter.log("----------------------||-AccountSettings page screenshot is taken, BEFORE change in email address");
+
+File scrFile111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+File screenshotName111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\04.png\\"+driver.getTitle()+".png");
+
+FileUtils.copyFile(scrFile111, screenshotName111);
+
+Reporter.log("<br><img src='"+screenshotName111+"' height='475' width='900'/><br>");
+	
 Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"Email\"]")).isEnabled());
 
-System.out.println("Email Address field is editable");
+Reporter.log("----------------------||-Email Address field is editable");
 
 driver.findElement(By.xpath("//*[@id=\"Email\"]")).clear();
 
@@ -180,13 +243,17 @@ try {
 	e.printStackTrace();
 	}
 
-TakesScreenshot ts11=(TakesScreenshot)driver;
+Reporter.log("----------------------||-AccountSettings page screenshot is taken, with change in email address");
 
-File source11=ts11.getScreenshotAs(OutputType.FILE);
+File scrFile1111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source11, new File("./Screenshots/Suite02a/03EmailAddChanged.png"));
+File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\05.png\\"+driver.getTitle()+".png");
+
+FileUtils.copyFile(scrFile1111, screenshotName1111);
+
+Reporter.log("<br><img src='"+screenshotName1111+"' height='475' width='900'/><br>");
 	
-System.out.println("AccountSettings page screenshot is taken, with change in email address");
+
 
 
 //Scroll down and save
@@ -194,6 +261,12 @@ System.out.println("AccountSettings page screenshot is taken, with change in ema
 JavascriptExecutor je1 = (JavascriptExecutor)driver;
 WebElement element2111 = driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]"));
 je1.executeScript("arguments[0].scrollIntoView(true);", element2111);
+
+Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).isEnabled());
+
+Reporter.log("----------------------||-Save button is available to click");
+
+
 try {
 	Thread.sleep(1000);
 	} catch (InterruptedException e) {
@@ -202,36 +275,41 @@ try {
 	}
 driver.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();		
 try {
-	Thread.sleep(7000);
+	Thread.sleep(2000);
 	} catch (InterruptedException e) {
 	//TODO Auto-generated catch block
 	e.printStackTrace();
 	}
+WebDriverWait wait11111 = new WebDriverWait(driver, 40);
+wait11111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")));
 
 
 //Log out
 
 driver.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[1]/a/span[2]")).click();
 try {
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 	} catch (InterruptedException e) {
 	//TODO Auto-generated catch block
 	e.printStackTrace();
 	}
 
 
-
 WebDriverWait wait4 = new WebDriverWait(driver, 40);
 WebElement element4 = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/p/a")));
 
 
-TakesScreenshot ts111=(TakesScreenshot)driver;
+Reporter.log("----------------------||-Logout page screenshot is taken");
 
-File source111=ts111.getScreenshotAs(OutputType.FILE);
+File scrFile11111 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source111, new File("./Screenshots/Suite02a/04LogoutPage.png"));
+File screenshotName11111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\06.png\\"+driver.getTitle()+".png");
+
+FileUtils.copyFile(scrFile11111, screenshotName11111);
+
+Reporter.log("<br><img src='"+screenshotName11111+"' height='475' width='900'/><br>");
 	
-System.out.println("Logout page screenshot is taken");
+
 
 
 driver.quit();
@@ -251,6 +329,9 @@ driver.quit();
  public void Login2() throws IOException
  
  {
+
+	 Reporter.log("---------------------||Login as CCL Admin, search for the Admin whose email address is changed and edit its coaching type access to Integrated");
+	 
 	 
 		String ccladmemail=null;
 		String ccladmpwd=null;
@@ -282,7 +363,7 @@ driver.quit();
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 		driver1=new ChromeDriver();
 		
-		System.out.println("Browser has started");
+		Reporter.log("----------------------||-Browser has started");
 
  
 //Log in as CCL Admin in another page
@@ -335,7 +416,7 @@ WebElement element1111111 = wait11111111.until(ExpectedConditions.elementToBeCli
 
 Assert.assertTrue(driver1.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[6]/a")).isEnabled());
 
-System.out.println("CCL Admin HomePage is displayed");
+Reporter.log("----------------------||-CCL Admin HomePage is displayed");
 
 
 driver1.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[6]/a")).click();
@@ -349,7 +430,7 @@ WebElement element411111 = wait4111111.until(ExpectedConditions.elementToBeClick
 
 Assert.assertTrue(driver1.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).isEnabled());
 
-System.out.println("Admin directory page is open");
+Reporter.log("----------------------||-Admin directory page is open");
 
 driver1.findElement(By.xpath("/html/body/div[2]/div[2]/div[1]/div[1]/div[1]/div/input")).sendKeys(clientadmemail2);
 
@@ -367,9 +448,10 @@ driver1.findElement(By.xpath("//*[@id=\"tblAdminDir\"]/tbody/tr[1]/td[1]/a")).cl
 WebDriverWait wait41111111 = new WebDriverWait(driver1, 40);
 WebElement element4111111 = wait41111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")));
 
+
 Assert.assertTrue(driver1.findElement(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")).isEnabled());
 
-System.out.println("Admin profile page is open and Coaching type access button is editable");
+Reporter.log("----------------------||-Admin profile page is open and Coaching type access button is editable");
 
 try {
 Thread.sleep(2000);
@@ -378,13 +460,15 @@ Thread.sleep(2000);
 e.printStackTrace();
 }
 
-TakesScreenshot ts51111=(TakesScreenshot)driver1;
+Reporter.log("----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change");
 
-File source51111=ts51111.getScreenshotAs(OutputType.FILE);
+File scrFile11111 = ((TakesScreenshot)driver1).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source51111, new File("./Screenshots/Suite02a/05aAdminProfilePage.png"));
-	
-System.out.println("Changes to Coaching Type access screenshot is taken");
+File screenshotName211111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\07\\"+driver1.getTitle()+".png");
+
+FileUtils.copyFile(scrFile11111, screenshotName211111);
+
+Reporter.log("<br><img src='"+screenshotName211111+"' height='475' width='900'/><br>");
 
 
 //Set coaching type access to Integrated
@@ -399,13 +483,17 @@ try {
 }
 
 
-TakesScreenshot ts1111=(TakesScreenshot)driver1;
+Reporter.log("----------------------||-Changes to Coaching Type access screenshot is taken");
 
-File source1111=ts1111.getScreenshotAs(OutputType.FILE);
+File scrFile111111 = ((TakesScreenshot)driver1).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source1111, new File("./Screenshots/Suite02a/05bAdminProfilePage.png"));
+File screenshotName3111111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\08\\"+driver1.getTitle()+".png");
+
+FileUtils.copyFile(scrFile111111, screenshotName3111111);
+
+Reporter.log("<br><img src='"+screenshotName3111111+"' height='475' width='900'/><br>");
 	
-System.out.println("Changes to Coaching Type access screenshot is taken");
+
 
 
 
@@ -442,6 +530,7 @@ public void Login3() throws IOException
 
 {
 	
+	Reporter.log("----------||Log in as the Client Admin that is now set as Integrated Admin and verify home page");
 	String clientadm=null;
 	String password=null;		
 	
@@ -471,7 +560,7 @@ public void Login3() throws IOException
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 	driver11=new ChromeDriver();
 	
-	System.out.println("Browser has started");
+	Reporter.log("----------------------||-Browser has started");
 
 driver11.get("https://cclcoachingnexus-qa.ccl.org");
 driver11.manage().window().maximize();
@@ -487,12 +576,38 @@ driver11.findElement(By.xpath("//*[@id=\"auth0-lock-container-1\"]/div/div[2]/fo
 
 WebDriverWait wait211 = new WebDriverWait(driver11, 40);
 WebElement element211 = wait211.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")));
+try {
+Thread.sleep(2000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
 
 
 //Assert Log in complete
 Assert.assertTrue(driver11.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).isEnabled());
 
-System.out.println("HomePage is open");
+Reporter.log("----------------------||-HomePage is open");
+
+try {
+Thread.sleep(2000);
+} catch (InterruptedException e) {
+//TODO Auto-generated catch block
+e.printStackTrace();
+}
+
+
+Reporter.log("----------------------||-Home page screenshot is taken");
+
+File scrFile111111 = ((TakesScreenshot)driver11).getScreenshotAs(OutputType.FILE);
+
+File screenshotName4111111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\09\\"+driver11.getTitle()+".png");
+
+FileUtils.copyFile(scrFile111111, screenshotName4111111);
+
+Reporter.log("<br><img src='"+screenshotName4111111+"' height='475' width='900'/><br>");
+
+
 
 //Scroll down
 JavascriptExecutor js2 = (JavascriptExecutor) driver11;
@@ -506,13 +621,16 @@ e.printStackTrace();
 
 
 //Take snapshot of home page : check learning packages available
-TakesScreenshot ts2=(TakesScreenshot)driver11;
+Reporter.log("----------------------||-Coaching packages available in Home page screenshot is taken");
 
-File source2=ts2.getScreenshotAs(OutputType.FILE);
+File scrFile51111111 = ((TakesScreenshot)driver11).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source2, new File("./Screenshots/Suite02a/06IntAdmHomePage.png"));
+File screenshotName51111111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\10\\"+driver11.getTitle()+".png");
 
-System.out.println("Integrated Admin home page screenshot is taken");
+FileUtils.copyFile(scrFile51111111, screenshotName51111111);
+
+Reporter.log("<br><img src='"+screenshotName51111111+"' height='475' width='900'/><br>");
+
 
 
 
@@ -525,14 +643,16 @@ Thread.sleep(1000);
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
-TakesScreenshot ts21=(TakesScreenshot)driver11;
 
-File source21=ts21.getScreenshotAs(OutputType.FILE);
+Reporter.log("----------------------||-Integrated Admin register button screenshot is taken");
 
-FileUtils.copyFile(source21, new File("./Screenshots/Suite02a/07IntegratedAdminRegisterButton.png"));
+File scrFile11111111 = ((TakesScreenshot)driver11).getScreenshotAs(OutputType.FILE);
 
-System.out.println("Integrated Admin register button screenshot is taken");
+File screenshotName611111111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\11\\"+driver11.getTitle()+".png");
 
+FileUtils.copyFile(scrFile11111111, screenshotName611111111);
+
+Reporter.log("<br><img src='"+screenshotName611111111+"' height='475' width='900'/><br>");
 
 try {
 Thread.sleep(1000);
@@ -549,7 +669,7 @@ driver11.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
 driver11.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[3]/a")).click();
 
 try {
-Thread.sleep(2000);
+Thread.sleep(1000);
 } catch (InterruptedException e) {
 //TODO Auto-generated catch block
 e.printStackTrace();
@@ -566,7 +686,7 @@ WebElement element21111 = wait2111.until(ExpectedConditions.elementToBeClickable
 
 Assert.assertTrue(driver11.findElement(By.xpath("//*[@id=\"Email\"]")).isEnabled());
 
-System.out.println("Email Address field is editable");
+Reporter.log("----------------------||-Email Address field is editable");
 
 driver11.findElement(By.xpath("//*[@id=\"Email\"]")).clear();
 
@@ -578,13 +698,17 @@ Thread.sleep(1000);
 e.printStackTrace();
 }
 
-TakesScreenshot ts211=(TakesScreenshot)driver11;
+Reporter.log("----------------------||-AccountSettings page screenshot is taken, with change in email address");
 
-File source211=ts211.getScreenshotAs(OutputType.FILE);
+File scrFile111111111 = ((TakesScreenshot)driver11).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source211, new File("./Screenshots/Suite02a/08EmailAddChanged.png"));
+File screenshotName7111111111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\12\\"+driver11.getTitle()+".png");
 
-System.out.println("AccountSettings page screenshot is taken, with change in email address");
+FileUtils.copyFile(scrFile111111111, screenshotName7111111111);
+
+Reporter.log("<br><img src='"+screenshotName7111111111+"' height='475' width='900'/><br>");
+
+
 
 
 //Scroll down and save
@@ -598,20 +722,24 @@ Thread.sleep(1000);
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
-driver11.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();		
+driver11.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();
+
 try {
-Thread.sleep(7000);
+Thread.sleep(3000);
 } catch (InterruptedException e) {
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
 
 
+WebDriverWait wait11111 = new WebDriverWait(driver11, 40);
+wait11111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")));
+
 //Log out
 
 driver11.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[1]/a/span[2]")).click();
 try {
-Thread.sleep(4000);
+Thread.sleep(2000);
 } catch (InterruptedException e) {
 //TODO Auto-generated catch block
 e.printStackTrace();
@@ -619,13 +747,14 @@ e.printStackTrace();
 WebDriverWait wait43 = new WebDriverWait(driver11, 40);
 WebElement element43 = wait43.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/p/a")));
 
-TakesScreenshot ts2111=(TakesScreenshot)driver11;
 
-File source2111=ts2111.getScreenshotAs(OutputType.FILE);
+File scrFile1111111111 = ((TakesScreenshot)driver11).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source2111, new File("./Screenshots/Suite02a/09LogoutPage.png"));
+File screenshotName81111111111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\12a\\"+driver11.getTitle()+".png");
 
-System.out.println("Logout page screenshot is taken");
+FileUtils.copyFile(scrFile1111111111, screenshotName81111111111);
+
+Reporter.log("<br><img src='"+screenshotName81111111111+"' height='475' width='900'/><br>");
 
 
 driver11.quit();
@@ -647,10 +776,6 @@ driver11.quit();
 public void Login4() throws IOException
 
 {
-
-	String ccladmemail=null;
-	String ccladmpwd=null;
-	
 	String clientadmemail3=null;
 	
 	File src=new File("C:\\Users\\veenaramakrishnan\\TestSuites\\QA\\FordTest\\Suite02.xlsx");
@@ -659,21 +784,9 @@ public void Login4() throws IOException
 	
 	XSSFWorkbook wb=new XSSFWorkbook(fis);
 	XSSFSheet sheet1=wb.getSheet("Suite02");
-	
-	XSSFRow row3=sheet1.getRow(11);
-	XSSFCell cell4=row3.getCell(4);
-	
-	XSSFRow row4=sheet1.getRow(12);
-	XSSFCell cell5=row4.getCell(4);
-	
+
 	XSSFRow row5=sheet1.getRow(15);
 	XSSFCell cell6=row5.getCell(4);
-	
-	XSSFRow row6=sheet1.getRow(19);
-	XSSFCell cell7=row6.getCell(4);
-	
-	ccladmemail=cell4.toString();
-	ccladmpwd=cell5.toString();
 	
 	clientadmemail3=cell6.toString();
 
@@ -712,16 +825,20 @@ WebElement element41111111 = wait411111111.until(ExpectedConditions.elementToBeC
 
 Assert.assertTrue(driver1.findElement(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")).isEnabled());
 
-System.out.println("Admin profile page is open -> Verify Email address");
 
-TakesScreenshot ts31111=(TakesScreenshot)driver1;
 
-File source31111=ts31111.getScreenshotAs(OutputType.FILE);
+Reporter.log("----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change");
 
-FileUtils.copyFile(source31111, new File("./Screenshots/Suite02a/10VerifyAdminProfilePage.png"));
+File scrFile11111 = ((TakesScreenshot)driver1).getScreenshotAs(OutputType.FILE);
+
+File screenshotName111112 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\13\\"+driver1.getTitle()+".png");
+
+FileUtils.copyFile(scrFile11111, screenshotName111112);
+
+Reporter.log("<br><img src='"+screenshotName111112+"' height='475' width='900'/><br>");
 
 try {
-Thread.sleep(2000);
+Thread.sleep(1000);
 } catch (InterruptedException e) {
 //TODO Auto-generated catch block
 e.printStackTrace();
@@ -732,25 +849,28 @@ WebElement coachingType_dropdown1=driver1.findElement(By.xpath("//*[@id=\"Coachi
 Select CT_dd1=new Select(coachingType_dropdown1);
 CT_dd1.selectByIndex(0);
 try {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
 
+Reporter.log("----------------------||-Changes to Coaching Type access screenshot is taken");
 
-TakesScreenshot ts311111=(TakesScreenshot)driver1;
+File scrFile111111 = ((TakesScreenshot)driver1).getScreenshotAs(OutputType.FILE);
 
-File source311111=ts311111.getScreenshotAs(OutputType.FILE);
+File screenshotName1111113 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\14\\"+driver1.getTitle()+".png");
 
-FileUtils.copyFile(source311111, new File("./Screenshots/Suite02a/11ChangeCoachingTypeAccess.png"));
-	
-System.out.println("Changes to Coaching Type access screenshot is taken");
+FileUtils.copyFile(scrFile111111, screenshotName1111113);
 
+Reporter.log("<br><img src='"+screenshotName1111113+"' height='475' width='900'/><br>");
 
-
-
-
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
 
 
 //Scroll down and save 
@@ -818,7 +938,7 @@ public void Login5() throws IOException
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\veenaramakrishnan\\chromedriver.exe");
 	driver111=new ChromeDriver();
 	
-	System.out.println("Browser has started");
+	Reporter.log("----------------------||-Browser has started");
 
 driver111.get("https://cclcoachingnexus-qa.ccl.org");
 driver111.manage().window().maximize();
@@ -839,11 +959,26 @@ WebElement element2112 = wait2112.until(ExpectedConditions.elementToBeClickable(
 //Assert Log in complete
 Assert.assertTrue(driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).isEnabled());
 
-System.out.println("HomePage is open");
+//Screenshot of home page1
+
+Reporter.log("----------------------||-Screen shot of HomePage");
+
+File scrFile = ((TakesScreenshot)driver111).getScreenshotAs(OutputType.FILE);
+
+File screenshotName4 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\15\\"+driver111.getTitle()+".png");
+
+FileUtils.copyFile(scrFile, screenshotName4);
+
+
+Reporter.log("<br><img src='"+screenshotName4+"' height='475' width='900'/><br>");
+
+
+
+
 
 //Scroll down
-JavascriptExecutor js22 = (JavascriptExecutor) driver111;
-js22.executeScript("window.scrollBy(0,1000)");
+JavascriptExecutor js = (JavascriptExecutor) driver111;
+js.executeScript("window.scrollBy(0,1000)");
 try {
 Thread.sleep(2000);
 } catch (InterruptedException e) {
@@ -853,13 +988,19 @@ e.printStackTrace();
 
 
 //Take snapshot of home page : check learning packages available
-TakesScreenshot ts23=(TakesScreenshot)driver111;
 
-File source23=ts23.getScreenshotAs(OutputType.FILE);
+Reporter.log("----------------------||-Screen shot of Coaching packages available in Home page");
 
-FileUtils.copyFile(source23, new File("./Screenshots/Suite02a/12ExecAdmHomePage.png"));
+File scrFile1 = ((TakesScreenshot)driver111).getScreenshotAs(OutputType.FILE);
 
-System.out.println("Executive Admin home page screenshot is taken");
+File screenshotName15 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\16\\"+driver111.getTitle()+".png");
+
+FileUtils.copyFile(scrFile1, screenshotName15);
+
+
+Reporter.log("<br><img src='"+screenshotName15+"' height='475' width='900'/><br>");
+
+
 
 
 
@@ -872,14 +1013,17 @@ Thread.sleep(1000);
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
-TakesScreenshot ts213=(TakesScreenshot)driver111;
 
-File source213=ts213.getScreenshotAs(OutputType.FILE);
+Reporter.log("----------------------||-Screen shot of Register button available in Home page");
 
-FileUtils.copyFile(source213, new File("./Screenshots/Suite02a/13ExecutiveAdminRegisterButton.png"));
+File scrFile11 = ((TakesScreenshot)driver111).getScreenshotAs(OutputType.FILE);
 
-System.out.println("Executive Admin register button screenshot is taken");
+File screenshotName116 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\17\\"+driver111.getTitle()+".png");
 
+FileUtils.copyFile(scrFile11, screenshotName116);
+
+
+Reporter.log("<br><img src='"+screenshotName116+"' height='475' width='900'/><br>");
 
 try {
 Thread.sleep(1000);
@@ -889,7 +1033,6 @@ e.printStackTrace();
 }
 
 driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[2]/a")).click();
-
 
 //Click on Admin name
 
@@ -913,7 +1056,7 @@ WebElement element211113 = wait21113.until(ExpectedConditions.elementToBeClickab
 
 Assert.assertTrue(driver111.findElement(By.xpath("//*[@id=\"Email\"]")).isEnabled());
 
-System.out.println("Email Address field is editable");
+Reporter.log("----------------------||-Email Address field is editable");
 
 driver111.findElement(By.xpath("//*[@id=\"Email\"]")).clear();
 
@@ -925,13 +1068,17 @@ Thread.sleep(1000);
 e.printStackTrace();
 }
 
-TakesScreenshot ts2113=(TakesScreenshot)driver111;
+Reporter.log("----------------------||-AccountSettings page screenshot is taken, with change in email address");
 
-File source2113=ts2113.getScreenshotAs(OutputType.FILE);
+File scrFile111 = ((TakesScreenshot)driver111).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source2113, new File("./Screenshots/Suite02a/14EmailAddChanged.png"));
+File screenshotName1117 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\18\\"+driver111.getTitle()+".png");
 
-System.out.println("AccountSettings page screenshot is taken, with change in email address");
+FileUtils.copyFile(scrFile111, screenshotName1117);
+
+Reporter.log("<br><img src='"+screenshotName1117+"' height='475' width='900'/><br>");
+
+
 
 
 //Scroll down and save
@@ -945,20 +1092,23 @@ Thread.sleep(1000);
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
-driver111.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();		
+driver111.findElement(By.xpath("//*[@id=\"btnSaveAdminProfile\"]")).click();	
+
 try {
-Thread.sleep(7000);
+Thread.sleep(1000);
 } catch (InterruptedException e) {
 //TODO Auto-generated catch block
 e.printStackTrace();
 }
 
+WebDriverWait wait11111 = new WebDriverWait(driver111, 40);
+wait11111.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"globalModal\"]/div/div/div[1]/button/span")));
 
 //Log out
 
 driver111.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[1]/a/span[2]")).click();
 try {
-Thread.sleep(4000);
+Thread.sleep(1000);
 } catch (InterruptedException e) {
 //TODO Auto-generated catch block
 e.printStackTrace();
@@ -966,13 +1116,17 @@ e.printStackTrace();
 WebDriverWait wait44 = new WebDriverWait(driver111, 40);
 WebElement element44 = wait44.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/p/a")));
 
-TakesScreenshot ts21113=(TakesScreenshot)driver111;
+Reporter.log("----------------------||-Logout page screenshot is taken");
 
-File source21113=ts21113.getScreenshotAs(OutputType.FILE);
+File scrFile1111 = ((TakesScreenshot)driver111).getScreenshotAs(OutputType.FILE);
 
-FileUtils.copyFile(source21113, new File("./Screenshots/Suite02a/15LogoutPage.png"));
+File screenshotName1111 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\19\\"+driver111.getTitle()+".png");
 
-System.out.println("Logout page screenshot is taken");
+FileUtils.copyFile(scrFile1111, screenshotName1111);
+
+Reporter.log("<br><img src='"+screenshotName1111+"' height='475' width='900'/><br>");
+
+
 
 
 driver111.quit();
@@ -1026,7 +1180,6 @@ public void Login6() throws IOException
 	
 	clientadmemail4=cell7.toString();
 
-	
 //Back to CCL Admin page
 
 //Clear search field and enter new client email ID
@@ -1037,6 +1190,7 @@ try {
 	//TODO Auto-generated catch block
 	e.printStackTrace();
 	}
+
 driver1.findElement(By.xpath("/html/body/div[2]/div[2]/div[1]/div[1]/div[1]/div/input")).sendKeys(clientadmemail4);
 
 try {
@@ -1054,13 +1208,15 @@ WebElement element411111112 = wait4111111112.until(ExpectedConditions.elementToB
 
 Assert.assertTrue(driver1.findElement(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")).isEnabled());
 
-System.out.println("Admin profile page is open -> Verify Email address");
+Reporter.log("----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change");
 
-TakesScreenshot ts311112=(TakesScreenshot)driver1;
+File scrFile11111 = ((TakesScreenshot)driver1).getScreenshotAs(OutputType.FILE);
 
-File source311112=ts311112.getScreenshotAs(OutputType.FILE);
+File screenshotName111118 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\20\\"+driver1.getTitle()+".png");
 
-FileUtils.copyFile(source311112, new File("./Screenshots/Suite02a/16VerifyAdminProfilePage.png"));
+FileUtils.copyFile(scrFile11111, screenshotName111118);
+
+Reporter.log("<br><img src='"+screenshotName111118+"' height='475' width='900'/><br>");
 
 try {
 Thread.sleep(2000);
@@ -1089,8 +1245,6 @@ try {
 	}
 
 
-
-
 //Set coaching type access to Both
 WebElement coachingType_dropdown11=driver1.findElement(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]"));
 Select CT_dd11=new Select(coachingType_dropdown11);
@@ -1102,16 +1256,23 @@ try {
 	e.printStackTrace();
 }
 
-TakesScreenshot ts3111112=(TakesScreenshot)driver1;
 
-File source3111112=ts3111112.getScreenshotAs(OutputType.FILE);
+Reporter.log("----------------------||-Changes to Coaching Type access screenshot is taken");
 
-FileUtils.copyFile(source3111112, new File("./Screenshots/Suite02a/17ChangeCoachingTypeAccess.png"));
-	
-System.out.println("Changes to Coaching Type access screenshot is taken");
+File scrFile111111 = ((TakesScreenshot)driver1).getScreenshotAs(OutputType.FILE);
 
+File screenshotName1111119 = new File ("C:\\Users\\veenaramakrishnan\\TestSuites\\Screenshots\\Suite02a\\21\\"+driver1.getTitle()+".png");
 
+FileUtils.copyFile(scrFile111111, screenshotName1111119);
 
+Reporter.log("<br><img src='"+screenshotName1111119+"' height='475' width='900'/><br>");
+
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
 
 //Scroll down and save 
 JavascriptExecutor je3111 = (JavascriptExecutor)driver1;

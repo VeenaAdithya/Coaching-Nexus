@@ -1,38 +1,398 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[----------------------||-This test is to verify change in Coaching type access made by CCL Admin]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Browser has started]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-First we will login as a Client Admin set up with Coaching type access as 'Both' and edit email address of the Admin in Account settings page]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-HomePage is open]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Screen shot of HomePage]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\01.png\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Screen shot of Coaching packages available in Home page]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\02.png\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Screen shot of Register button available in Home page]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\03.png\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-AccountSettings page screenshot is taken, BEFORE change in email address]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\04.png\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Email Address field is editable]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-AccountSettings page screenshot is taken, with change in email address]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\05.png\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Save button is available to click]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Logout page screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\06.png\You have been logged out! - Coaching Nexus.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[---------------------||Login as CCL Admin, search for the Admin whose email address is changed and edit its coaching type access to Integrated]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Browser has started]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-CCL Admin HomePage is displayed]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Admin directory page is open]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Admin profile page is open and Coaching type access button is editable]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\07\Admin Directory.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Changes to Coaching Type access screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\08\Admin Directory.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------||Log in as the Client Admin that is now set as Integrated Admin and verify home page]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Browser has started]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-HomePage is open]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Home page screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\09\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Coaching packages available in Home page screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\10\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Integrated Admin register button screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\11\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Email Address field is editable]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-AccountSettings page screenshot is taken, with change in email address]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\12\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\12a\You have been logged out! - Coaching Nexus.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\13\Admin Directory.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Changes to Coaching Type access screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\14\Admin Directory.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Browser has started]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Screen shot of HomePage]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\15\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Screen shot of Coaching packages available in Home page]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\16\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Screen shot of Register button available in Home page]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\17\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Email Address field is editable]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-AccountSettings page screenshot is taken, with change in email address]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\18\Dashboard.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Logout page screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\19\You have been logged out! - Coaching Nexus.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\20\Admin Directory.png' height='475' width='900'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[----------------------||-Changes to Coaching Type access screenshot is taken]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\21\Admin Directory.png' height='475' width='900'/><br>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2018-08-29T08:26:49Z" name="Default suite" finished-at="2018-08-29T08:32:07Z" duration-ms="318430">
+  <suite started-at="2018-08-30T06:54:34Z" name="Default suite" finished-at="2018-08-30T06:59:47Z" duration-ms="313597">
     <groups>
     </groups>
-    <test started-at="2018-08-29T08:26:49Z" name="Default test" finished-at="2018-08-29T08:32:07Z" duration-ms="318430">
+    <test started-at="2018-08-30T06:54:34Z" name="Default test" finished-at="2018-08-30T06:59:47Z" duration-ms="313597">
       <class name="TestSuites.Suite02a">
-        <test-method is-config="true" signature="Start()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-29T08:26:49Z" name="Start" description="Open Browser" finished-at="2018-08-29T08:26:53Z" duration-ms="4495" status="PASS">
+        <test-method is-config="true" signature="Start()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-30T06:54:34Z" name="Start" description="Open Browser" finished-at="2018-08-30T06:54:37Z" duration-ms="2834" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[----------------------||-This test is to verify change in Coaching type access made by CCL Admin]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Browser has started]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Start -->
-        <test-method signature="Login1()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-29T08:26:53Z" name="Login1" description="Login as Client Admin with coaching type access set as Both and edit email address" finished-at="2018-08-29T08:27:56Z" duration-ms="63098" status="PASS">
+        <test-method signature="Login1()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-30T06:54:37Z" name="Login1" description="Login as Client Admin with coaching type access set as Both and edit email address" finished-at="2018-08-30T06:55:37Z" duration-ms="60169" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[----------------------||-First we will login as a Client Admin set up with Coaching type access as 'Both' and edit email address of the Admin in Account settings page]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-HomePage is open]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Screen shot of HomePage]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\01.png\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Screen shot of Coaching packages available in Home page]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\02.png\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Screen shot of Register button available in Home page]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\03.png\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-AccountSettings page screenshot is taken, BEFORE change in email address]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\04.png\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Email Address field is editable]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-AccountSettings page screenshot is taken, with change in email address]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\05.png\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Save button is available to click]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Logout page screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\06.png\You have been logged out! - Coaching Nexus.png' height='475' width='900'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Login1 -->
-        <test-method signature="Login2()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-29T08:27:56Z" name="Login2" description="Log in as CCL Admin and edit Coaching type access to Integrated for the Client Admin" finished-at="2018-08-29T08:29:10Z" depends-on-methods="TestSuites.Suite02a.Login1" duration-ms="73874" status="PASS">
+        <test-method signature="Login2()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-30T06:55:37Z" name="Login2" description="Log in as CCL Admin and edit Coaching type access to Integrated for the Client Admin" finished-at="2018-08-30T06:56:51Z" depends-on-methods="TestSuites.Suite02a.Login1" duration-ms="74594" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[---------------------||Login as CCL Admin, search for the Admin whose email address is changed and edit its coaching type access to Integrated]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Browser has started]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-CCL Admin HomePage is displayed]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Admin directory page is open]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Admin profile page is open and Coaching type access button is editable]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\07\Admin Directory.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Changes to Coaching Type access screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\08\Admin Directory.png' height='475' width='900'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Login2 -->
-        <test-method signature="Login3()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-29T08:29:10Z" name="Login3" description="Verify Integrated Admin Home page" finished-at="2018-08-29T08:30:09Z" depends-on-methods="TestSuites.Suite02a.Login2" duration-ms="58953" status="PASS">
+        <test-method signature="Login3()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-30T06:56:51Z" name="Login3" description="Verify Integrated Admin Home page" finished-at="2018-08-30T06:57:53Z" depends-on-methods="TestSuites.Suite02a.Login2" duration-ms="61735" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[----------||Log in as the Client Admin that is now set as Integrated Admin and verify home page]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Browser has started]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-HomePage is open]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Home page screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\09\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Coaching packages available in Home page screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\10\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Integrated Admin register button screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\11\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Email Address field is editable]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-AccountSettings page screenshot is taken, with change in email address]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\12\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\12a\You have been logged out! - Coaching Nexus.png' height='475' width='900'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Login3 -->
-        <test-method signature="Login4()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-29T08:30:09Z" name="Login4" description="In CCL Admin page, verify change in email address; then change Coaching type access to Executive" finished-at="2018-08-29T08:30:34Z" depends-on-methods="TestSuites.Suite02a.Login3" duration-ms="24944" status="PASS">
+        <test-method signature="Login4()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-30T06:57:53Z" name="Login4" description="In CCL Admin page, verify change in email address; then change Coaching type access to Executive" finished-at="2018-08-30T06:58:17Z" depends-on-methods="TestSuites.Suite02a.Login3" duration-ms="23609" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\13\Admin Directory.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Changes to Coaching Type access screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\14\Admin Directory.png' height='475' width='900'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Login4 -->
-        <test-method signature="Login5()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-29T08:30:34Z" name="Login5" description="Login as Client Admin and verify Executive Admin home page -&gt; Then edit email address" finished-at="2018-08-29T08:31:35Z" depends-on-methods="TestSuites.Suite02a.Login4" duration-ms="61022" status="PASS">
+        <test-method signature="Login5()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-30T06:58:17Z" name="Login5" description="Login as Client Admin and verify Executive Admin home page -&gt; Then edit email address" finished-at="2018-08-30T06:59:15Z" depends-on-methods="TestSuites.Suite02a.Login4" duration-ms="58650" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[----------------------||-Browser has started]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Screen shot of HomePage]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\15\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Screen shot of Coaching packages available in Home page]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\16\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Screen shot of Register button available in Home page]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\17\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Email Address field is editable]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-AccountSettings page screenshot is taken, with change in email address]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\18\Dashboard.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Logout page screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\19\You have been logged out! - Coaching Nexus.png' height='475' width='900'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Login5 -->
-        <test-method signature="Login6()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-29T08:31:35Z" name="Login6" description="In CCL Admin page, verify change in email address and change coaching type access back as Both, email address to original email address" finished-at="2018-08-29T08:32:07Z" depends-on-methods="TestSuites.Suite02a.Login5" duration-ms="32005" status="PASS">
+        <test-method signature="Login6()[pri:0, instance:TestSuites.Suite02a@6da21078]" started-at="2018-08-30T06:59:15Z" name="Login6" description="In CCL Admin page, verify change in email address and change coaching type access back as Both, email address to original email address" finished-at="2018-08-30T06:59:47Z" depends-on-methods="TestSuites.Suite02a.Login5" duration-ms="31978" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[----------------------||-Admin profile page image is taken before changes are made to coaching type access; Verify email address change]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\20\Admin Directory.png' height='475' width='900'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[----------------------||-Changes to Coaching Type access screenshot is taken]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\veenaramakrishnan\TestSuites\Screenshots\Suite02a\21\Admin Directory.png' height='475' width='900'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Login6 -->
       </class> <!-- TestSuites.Suite02a -->

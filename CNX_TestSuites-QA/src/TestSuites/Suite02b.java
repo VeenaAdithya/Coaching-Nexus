@@ -370,13 +370,21 @@ driver1.findElement(By.xpath("//*[@id=\"tblAdminDir\"]/tbody/tr[1]/td[1]/a")).cl
 WebDriverWait wait41111111 = new WebDriverWait(driver1, 40);
 WebElement element4111111 = wait41111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")));
 
+
+String checkemail=driver.findElement(By.xpath("//*[@id=\"Email\"]")).getText();
+
+Assert.assertEquals(clientadmemail2, checkemail);
+
+System.out.println("Email is displayed per changes made");
+
+
 TakesScreenshot ts1111=(TakesScreenshot)driver1;
 
 File source1111=ts1111.getScreenshotAs(OutputType.FILE);
 
 FileUtils.copyFile(source1111, new File("./Screenshots/Suite02b/05aAdminProfilePage.png"));
 	
-System.out.println("Changes made to Email address is verified");
+System.out.println("Changes made to Email address is captured");
 
 Assert.assertTrue(driver1.findElement(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")).isEnabled());
 
@@ -581,6 +589,8 @@ driver11.findElement(By.xpath("//*[@id=\"NavbarMain\"]/ul/li[3]/ul/li/a/span[2]"
 WebDriverWait wait2111 = new WebDriverWait(driver11, 40);
 WebElement element21111 = wait2111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"Email\"]")));
 
+System.out.println("Email is displayed per changes made");
+
 Assert.assertTrue(driver11.findElement(By.xpath("//*[@id=\"Email\"]")).isEnabled());
 
 System.out.println("Email Address field is editable");
@@ -750,6 +760,12 @@ driver1.findElement(By.xpath("//*[@id=\"tblAdminDir\"]/tbody/tr[1]/td[1]/a")).cl
 
 WebDriverWait wait411111111 = new WebDriverWait(driver1, 40);
 WebElement element41111111 = wait411111111.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")));
+
+String checkemail=driver.findElement(By.xpath("//*[@id=\"Email\"]")).getText();
+
+Assert.assertEquals(clientadmemail3, checkemail);
+
+System.out.println("Email is displayed per changes made");
 
 Assert.assertTrue(driver1.findElement(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")).isEnabled());
 
@@ -1104,6 +1120,12 @@ driver1.findElement(By.xpath("//*[@id=\"tblAdminDir\"]/tbody/tr[1]/td[1]/a")).cl
 
 WebDriverWait wait4111111112 = new WebDriverWait(driver1, 40);
 WebElement element411111112 = wait4111111112.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"CoachingTypeIdAccess\"]")));
+
+String checkemail=driver.findElement(By.xpath("//*[@id=\"Email\"]")).getText();
+
+Assert.assertEquals(clientadmemail4, checkemail);
+
+System.out.println("Email is displayed per changes made");
 
 Assert.assertTrue(driver1.findElement(By.xpath("//*[@id=\"IsClientSuperAdmin\"]")).isEnabled());
 
